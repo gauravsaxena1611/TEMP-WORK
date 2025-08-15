@@ -1,0 +1,41 @@
+Based on the meeting transcript, here are the final action items:
+
+Action Items:
+
+Determine the Inception Date: 
+The team needs to confirm the exact date the Taiwan-specific application went live in production. It is understood to be sometime in 2022, but the precise date is required.
+
+Owner: 
+Rishabh and Gaurav to follow up with the L2 team, 
+the India team (Rabinandan), or by checking the existing CSI (Compliance Risk Management - APPID: 176046) history.
+
+Purpose: This date is crucial to determine if the new, split-out application falls under the encryption policy (i.e., if the date is before January 2024).
+
+-----------------------------------------------------------------
+
+Finalize the Split Type: 
+Based on the information gathered, the team needs to officially decide whether to proceed with an "Administrative Split" or a "Functional Split" for the new CSI entry. The current consensus leans towards an "Administrative Split," assuming no new development is needed for the split itself.
+
+Owner: 
+Gaurav and Rishabh to lead this decision.
+
+---------------------------------------------------------------------
+
+Initiate New CSI Registration: 
+Once the inception date and split type are confirmed, the process of registering the new CSI for the Taiwan Official Letter Management application needs to be initiated.
+
+Owner: 
+Gaurav will contact Chirag (the application manager) or his designated backup to formally start this process. This will involve documenting the rationale for the chosen inception date and the administrative split.
+
+------------------------------------------------------------------------
+
+Vendor Engagement (Long-term): 
+While the application may be out of scope for mandatory encryption based on its inception date, the team should still engage with the vendor.
+
+Owner: 
+To be determined, but likely led by the application management team (Chirag's team).
+
+Purpose: 
+To discuss the possibility of implementing database-level encryption as a best practice for enhanced security in the future.
+
+---------------------------------------------------------------------------

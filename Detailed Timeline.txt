@@ -1,0 +1,58 @@
+Here's a detailed timeline of the main events and a cast of characters based on the provided source:
+
+Detailed Timeline
+Pre-2010s:
+
+An application, "PRC compliance risk management" (CSI ID: 180531), is developed and put into production. This application encompasses various functionalities, including a specific function for the Taiwan region.
+The Taiwan-specific functionality is established as a standalone application at some point in the past, even though it's incorrectly grouped under the main "PRC compliance risk management" CSI ID.
+2022:
+
+The Taiwan-specific application (the "Taiwan instance") goes live in production. Its infrastructure (application server, database) is already separate from the rest of the "PRC compliance risk management" system.
+Initial development is carried out by the India team, including Rabi Nanda.
+2023:
+
+After about a year in production, the project related to the Taiwan instance is assigned to the Shanghai team.
+During this period, there's a CSI split, and the Taiwan instance is linked to CSI ID 176046 (previously 170607).
+Before January 2024:
+
+The encryption policy requiring new applications to be in scope for encryption (if they have confidential PII) becomes effective. Applications incepted before January 2024 are generally not in scope for this policy.
+2025 (Date unclear, but likely early 2025, as the call happens in August 2025 and discussions about future go-live dates are mentioned):
+
+The project related to the Taiwan instance is reassigned to the current team.
+There's a plan to create a new, dedicated CSI ID for the Taiwan-specific application. This involves an infrastructure change, specifically moving from the existing infrastructure to a new setup in a DMZ zone with new components like an Active MQ and a new listener.
+SLTN (Solution and Technical Architecture) and other processes for the new server setup under the new CSI ID have already begun.
+August 1, 2025 (Date of the recorded meeting, "2025-08-01 08-06-32.mp4"):
+
+A meeting takes place to discuss the classification of the split (administrative vs. functional) for the Taiwan application, specifically concerning its inception date and implications for encryption compliance.
+Key Discussion Points:Application Scope: The new CSI ID for the Taiwan application is a new application from a CSI perspective, but it's an existing application already running in production.
+Inception Date: The primary driver for the discussion is whether the new CSI ID will have a future inception date (making it subject to encryption policy) or retain an earlier, historical inception date (potentially exempting it).
+Administrative Split vs. Functional Split:Functional Split: Implies new development, code changes, new infrastructure procurement, and a future inception date, requiring SDLC and compliance from go-live.
+Administrative Split: Implies correcting an inventory error where multiple logical systems were incorrectly grouped under one CSI ID. It requires no additional development or infrastructure procurement for separation (only administrative work). It retains a historical inception date (when the functionality originally moved to production) and is immediately considered in production status, subject to all production standards.
+Infrastructure Changes: Pritika raises a concern about new infrastructure procurement (DMZ zone, Active MQ, new listener) for the Taiwan instance, which might dequalify it from an administrative split.
+Clarification on Infrastructure: The existing infrastructure for the Taiwan instance is already separate. The new DMZ and listener components are augmentations to run separately, not a complete new build. Tom believes this still qualifies as an administrative split if well-documented.
+Vendor Product: The core application is a vendor product.
+Encryption Policy: April clarifies that if the inception date is before January 2024, the application is not in scope for encryption as per policy. Database-level encryption (Transparent Database Encryption for SQL) is generally feasible for vendor products, even if app-level encryption isn't.
+Decision (Tentative): The team leans towards an administrative split to use an earlier inception date, thus avoiding mandatory encryption. This decision is to be based on what actually happened with the split, not solely on encryption compliance.
+Challenges of Administrative Split: If an administrative split is chosen, the new CSI ID will be immediately in production, and all production standards must be met, potentially leading to immediate red flags (e.g., "red camp alerts," "MCA failures") if not fully prepared.
+Next Steps:Confirm the exact "production live date" (inception date) for the Taiwan application. This date needs to be before January 2024 for encryption exemption.
+Document thoroughly why an administrative split and the chosen inception date were selected.
+Initiate discussions with the vendor regarding their capability for database-level encryption, even if not mandated by policy for this specific case.
+Identify the responsible party (App Manager) for initiating the new CSI registration.
+Late 2025 (Potential go-live for new CSI ID):
+
+A new CSI ID will be registered for the Taiwan application. The effective date of the CSI creation might be later (e.g., November or December 2025, or Q3 September 2025), but the inception date within the CSI record will be the historical 2022 date.
+Future:
+
+The organization might eventually revisit the desirability of encryption for applications like this one as a best practice, even if not strictly mandated by policy.
+Cast of Characters
+Tom: A key participant in the discussion, providing guidance on functional vs. administrative splits and their implications for inception dates and compliance. He emphasizes documenting the rationale for the chosen split type and inception date. He also asks about vendor encryption capabilities.
+April: Appears to be an expert or lead on encryption policy and compliance. She clarifies the scope of encryption based on inception dates (before/after Jan 2024) and the feasibility of database-level encryption for vendor products. She is responsible for deciding on encryption requirements.
+Pritika: Raises a crucial point about the new infrastructure procurement potentially conflicting with the definition of an administrative split, prompting further clarification on the nature of the infrastructure changes.
+Rishab: (Likely "Rish" in the conversation) A participant who seems to be leading the internal team's efforts on this application. He summarizes the call's decisions regarding the administrative split, inception date, and encryption scope. He is also involved in identifying the actual production live date for the Taiwan application.
+Gor: (Likely "Gor" or "G" in the conversation) Another participant involved in the technical details, confirming that no functionality is being added or removed, only infrastructure location changes.
+Chiag (Chira): The assigned App Manager for the application, currently on planned leave. He is the accountable person for initiating the new CSI registration.
+Rabi Nanda: Mentioned as being involved in the initial development of the application by the India team.
+KL: Someone who can potentially help with finding the actual production live date of the Taiwan functionality.
+Product Manager / Program Manager: Roles mentioned as potential sources for the production live date information.
+India team: The team initially responsible for the application's development.
+Shanghai team: The team to whom the project was assigned in 2023.
