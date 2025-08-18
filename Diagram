@@ -1,40 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2025-08-17T22:19:00.000Z" agent="5.0 (Windows)" etag="api-test-diag" version="16.4.2" type="device">
-  <diagram name="API Test Process Flow" id="apiTestProcessFlow">
-    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="900" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2025-08-17T21:09:00.000Z" agent="5.0 (Windows)" etag="regression-flow" version="16.4.2" type="device">
+  <diagram name="Regression Testing Process" id="regressionTestingProcess">
+    <mxGraphModel dx="1200" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="850" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <!-- Step 1: Identify Endpoints -->
-        <mxCell id="2" value="Identify/Map Endpoints&#xa;(from Architecture + Workflow)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976d2;" vertex="1" parent="1">
-          <mxGeometry x="250" y="40" width="400" height="60" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- Step 1: Define Priority Workflows & Past Defects -->
+        <mxCell id="2" value="Define Priority Workflows &amp; Past Defects (Step 1)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976d2;" vertex="1" parent="1">
+          <mxGeometry x="380" y="40" width="440" height="60" as="geometry"/>
         </mxCell>
-        <!-- Step 2: Define Scenarios -->
-        <mxCell id="3" value="Define API Test Scenarios&#xa;(valid, error, authz, edge)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#B2DFDB;strokeColor=#009688;" vertex="1" parent="1">
-          <mxGeometry x="250" y="140" width="400" height="60" as="geometry"/>
+        <!-- Step 2: Select & Collate Test Classes -->
+        <mxCell id="3" value="Select &amp; Collate Test Classes (Step 3-5)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#B2DFDB;strokeColor=#009688;" vertex="1" parent="1">
+          <mxGeometry x="380" y="130" width="440" height="60" as="geometry"/>
         </mxCell>
-        <!-- Step 3: Scaffold Test Classes -->
-        <mxCell id="4" value="Scaffold API Test Classes&#xa;(MockMvc/WebTestClient/RestAssured)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#FFB300;" vertex="1" parent="1">
-          <mxGeometry x="250" y="240" width="400" height="60" as="geometry"/>
+        <!-- Step 3: Document in RegressionTestSuite.md -->
+        <mxCell id="4" value="Document in RegressionTestSuite.md&#xa;(Scenarios, Coverage, Defects)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#FFB300;" vertex="1" parent="1">
+          <mxGeometry x="380" y="220" width="440" height="60" as="geometry"/>
         </mxCell>
-        <!-- Step 4: Implement & Run Tests -->
-        <mxCell id="5" value="Implement &amp; Run Tests&#xa;on All Endpoints" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#CFD8DC;strokeColor=#90A4AE;" vertex="1" parent="1">
-          <mxGeometry x="250" y="340" width="400" height="60" as="geometry"/>
+        <!-- Step 4: Automate Suite Execution -->
+        <mxCell id="5" value="Automate Suite Execution&#xa;(CI/CD, Local)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#CFD8DC;strokeColor=#90A4AE;" vertex="1" parent="1">
+          <mxGeometry x="380" y="310" width="440" height="60" as="geometry"/>
         </mxCell>
-        <!-- Step 5: Validate Outputs -->
-        <mxCell id="6" value="Validate Outputs, Security &amp; Coverage" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;" vertex="1" parent="1">
-          <mxGeometry x="250" y="440" width="400" height="60" as="geometry"/>
+        <!-- Step 5: Monitor & Validate -->
+        <mxCell id="6" value="Monitor &amp; Validate&#xa;(Pass/Fail, Flaky, Gaps)" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;" vertex="1" parent="1">
+          <mxGeometry x="380" y="400" width="440" height="60" as="geometry"/>
         </mxCell>
-        <!-- Step 6: Approval & Store -->
-        <mxCell id="7" value="Approval, Store &amp; Feed Regression and Docs" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#B3E5FC;strokeColor=#0288D1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="540" width="400" height="60" as="geometry"/>
+        <!-- Step 6: Refine: Add, Remove, Quarantine -->
+        <mxCell id="7" value="Refine: Add, Remove, or Quarantine as Needed" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCBC;strokeColor=#D84315;" vertex="1" parent="1">
+          <mxGeometry x="380" y="490" width="440" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Step 7: Update Tracking & Trace -->
+        <mxCell id="8" value="Update Tracking and Trace to Workflows" style="rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#D1C4E9;strokeColor=#7E57C2;" vertex="1" parent="1">
+          <mxGeometry x="380" y="580" width="440" height="60" as="geometry"/>
         </mxCell>
         <!-- Arrows between steps -->
-        <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#1976d2;html=1;" edge="1" source="2" target="3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#009688;html=1;" edge="1" source="3" target="4" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#FFB300;html=1;" edge="1" source="4" target="5" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#388E3C;html=1;" edge="1" source="5" target="6" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#0288D1;html=1;" edge="1" source="6" target="7" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#1976d2;html=1;" edge="1" source="2" target="3" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#009688;html=1;" edge="1" source="3" target="4" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#FFB300;html=1;" edge="1" source="4" target="5" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#90A4AE;html=1;" edge="1" source="5" target="6" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#388E3C;html=1;" edge="1" source="6" target="7" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#D84315;html=1;" edge="1" source="7" target="8" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
       </root>
     </mxGraphModel>
   </diagram>
