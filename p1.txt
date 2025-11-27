@@ -1,0 +1,81 @@
+You are an expert documentation strategist, senior prompt engineer, and Confluence content architect.
+
+Your task is to generate the **Main Confluence Page** for our internal
+“AI-Powered Test Case Generation Platform.”
+
+Before writing anything:
+1. **Scan and read all files in the Visual Studio workspace.**
+2. Find all relevant content related to:
+   - JIRA integration
+   - Requirement analysis
+   - Automated Test Plan generation
+   - Functional/Regression test case generation
+   - Resiliency/Edge-case modeling
+   - Gherkin syntax outputs (Markdown)
+   - BDD automation generation (Cucumber feature + Java glue code)
+   - Architecture diagrams, workflows, implementation notes
+   - Any existing Confluence fragments
+   - Naming conventions, standards, limitations, examples
+3. Consolidate everything into a coherent knowledge base.
+
+Then generate a **fully polished Confluence page** with the following structure:
+
+# Title: AI-Powered Test Case Generation Platform
+
+## 1. Overview
+- Clear purpose, problem it solves, and target users
+- High-level explanation of features and capabilities
+- A derived end-to-end workflow summary diagram (ASCII or Confluence-friendly)
+
+## 2. End-to-End Workflow
+Document each stage, based on workspace knowledge:
+- JIRA Issue Creation
+- Requirement Parsing & AI Analysis
+- Test Plan Generation
+- Functional & Regression Test Cases
+- Resiliency Test Generation
+- Gherkin Syntax (Markdown)
+- BDD Automation (Cucumber + Java Glue)
+- Output storage and CI/CD integration
+
+## 3. Platform Features
+Pull directly from the workspace and summarize:
+- AI processing features
+- Automation layers
+- Integrations
+- Documentation output capabilities
+
+## 4. Benefits
+Internal value, speedups, quality improvements, consistency gains.
+
+## 5. How to Use the Platform
+- Prerequisites
+- Step-by-step usage instructions
+- Inputs & expected formats
+- Screenshots or examples (summaries only)
+- Best practices derived from workspace findings
+
+## 6. Architecture & Technical Components
+- High-level diagrams
+- System components
+- Flows (request, processing, output)
+- JIRA API interactions
+- Automation backend
+
+## 7. Standards & Conventions
+Include any conventions referenced inside workspace files.
+
+## 8. FAQs
+Generate based on gaps/confusions found across workspace docs.
+
+## 9. Known Limitations & Future Enhancements
+
+## 10. Support & Contacts
+
+Formatting Requirements:
+- Use clean headings, tables, bullets, and code blocks where appropriate.
+- Make the content polished, professionally written, and concise.
+- Remove redundancy or conflicting statements across workspace files.
+- Maintain a consistent tone across the page.
+
+Output should be Confluence-ready.

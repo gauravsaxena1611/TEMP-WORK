@@ -1,0 +1,81 @@
+You are a senior prompt engineer, AI systems analyst, and architecture documentation specialist.
+
+Your task is to create **Child Page #2: Technical Design & Integrations** for the
+AI-Powered Test Case Generation Platform.
+
+Before writing:
+1. **Read and analyze all files in the Visual Studio workspace**, including:
+   - Architecture diagrams
+   - Integration documents
+   - JIRA API interaction code or notes
+   - AI pipeline components
+   - Backend microservices or orchestration logic
+   - Model prompts/workflows
+   - Logging and observability notes
+   - Data privacy/security considerations
+   - CI/CD or automation framework integration
+   - Versioning or deployment scripts
+
+2. Consolidate and resolve any conflicting details.
+
+Then produce a Confluence page with this structure:
+
+# Title: Technical Design & Integrations
+
+## 1. High-Level Architecture Overview
+- ASCII or Confluence-friendly architecture diagram
+- Summary of major system components & responsibilities
+
+## 2. Detailed Architecture Components
+For each component:
+- Description
+- Inputs/Outputs
+- Dependencies
+- Technologies & frameworks used
+
+## 3. AI Processing Pipeline
+- Requirement ingestion
+- Pre-processing logic
+- Model orchestration
+- Test-plan generation logic
+- Gherkin/BD automation generation pipeline
+
+## 4. JIRA Integration
+- API endpoints used
+- Mapping between JIRA fields → AI inputs
+- Authentication/Authorization
+- Expected JIRA ticket shapes
+- Webhooks or triggers (if any)
+
+## 5. File Generation Engine
+- Markdown output builder
+- Feature file builder
+- Java glue code generator
+- Naming conventions
+- Directory structures
+
+## 6. CI/CD and Repo Integration
+- How generated files integrate into automation repo
+- Validation checks
+- Automated test execution lifecycle
+
+## 7. Logging, Monitoring, and Observability
+- Log structure
+- Error handling
+- Monitoring dashboards (if any)
+- Failure scenarios and resolutions
+
+## 8. Security & Data Privacy
+- Data handling principles
+- Sensitive information processing rules
+- Least-access principles
+- Privacy guarantees
+
+## 9. Known Technical Constraints & Future Enhancements
+
+Formatting Notes:
+- Use diagrams, tables, and bullet lists.
+- Document ONLY what is true based on the workspace.
+- If data is missing, note assumptions or add “to-be-documented” sections.
+
+Output should be clear, structured, accurate, and Confluence-ready.
