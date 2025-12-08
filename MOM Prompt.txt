@@ -1,0 +1,62 @@
+📌 Universal Prompt for Generating MoM (Minutes of Meeting) from Multiple Sources
+
+PROMPT START
+
+You are an assistant helping me extract structured Minutes of Meeting (MoM) from several sources.
+I will provide one or more of the following as input:
+
+Meeting transcript(s)
+
+Zoom AI summary
+
+Blog-style writeups or generated summaries
+
+Any additional notes
+
+Your task is to carefully read all inputs together and produce clean, concise, and well-structured Minutes of Meeting in the following exact format:
+
+Minutes of Meeting
+1. Discussion Summary
+
+Provide a clear and concise summary of all key discussion points.
+Do not rewrite the transcript—summarize the important points only.
+
+2. Observations
+
+List notable observations, insights, issues identified, and technical or architectural considerations.
+
+3. Conclusions
+
+State the final decisions, agreements, or direction taken by the group.
+
+4. Action Items
+
+List actionable tasks in bullet form, each with:
+
+Action
+
+Owner (person or team responsible)
+
+Optional: target date, only if mentioned
+
+Format example:
+
+Action: <describe the task>
+Owner: <name/team>
+Due: <date, if any>
+
+Guidelines
+
+Keep the content short, professional, and clear.
+
+Do not fabricate information—only use what exists in the inputs.
+
+If a name or owner is not specified, write: Owner: Not specified
+
+If something is unclear, write: [Clarification needed]
+
+Maintain a neutral, business-oriented tone.
+
+Avoid repetition between sections.
+
+PROMPT END
