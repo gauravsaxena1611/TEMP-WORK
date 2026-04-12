@@ -1,0 +1,8 @@
+{
+  "folders": [
+    { "path": "../.github",        "name": "⚙️ Copilot Config" },
+    { "path": "../AI-Resource-Hub","name": "📚 AI Resource Hub" },
+    { "path": "../ICRM",           "name": "🏢 ICRM — All Verticals" }
+  ],
+  "settings": {}
+}

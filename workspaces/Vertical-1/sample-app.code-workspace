@@ -1,0 +1,13 @@
+{
+  "folders": [
+    { "path": "../../.github",       "name": "⚙️ Copilot Config" },
+    { "path": "../../AI-Resource-Hub","name": "📚 AI Resource Hub" },
+    { "path": "../_sample-app",       "name": "🏗️ _sample-app" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/ICRM/Vertical-2/**": true,
+      "**/ICRM/Vertical-3/**": true
+    }
+  }
+}
