@@ -1,0 +1,121 @@
+<mxfile host="65bd71144e">
+    <diagram id="hSpdOvnlx6wQgmUJCqUe" name="Page-1">
+        <mxGraphModel dx="1531" dy="678" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0" adaptiveColors="auto">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="zone_actors" value="Users and Actors" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#aaaaaa;strokeDasharray=6 4;opacity=30;verticalAlign=top;fontSize=11;fontStyle=1;fontColor=#555555;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="90" width="1280" height="175" as="geometry"/>
+                </mxCell>
+                <mxCell id="zone_upstream" value="Upstream Data Sources" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#aaaaaa;strokeDasharray=6 4;opacity=40;verticalAlign=top;fontSize=11;fontStyle=1;fontColor=#555555;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="295" width="225" height="510" as="geometry"/>
+                </mxCell>
+                <mxCell id="zone_downstream" value="Downstream Consumers" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#aaaaaa;strokeDasharray=6 4;opacity=40;verticalAlign=top;fontSize=11;fontStyle=1;fontColor=#555555;" parent="1" vertex="1">
+                    <mxGeometry x="1115" y="355" width="225" height="365" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="C4 Level 1 — System Context Diagram&lt;br&gt;&lt;b&gt;Compliance Risk Assessment (CRA)  ·  CSI-180236&lt;/b&gt;&lt;br&gt;Audience: Business Stakeholders  |  Phase 2 — Constraints  |  Last Verified: 2026-04-12" style="text;html=1;align=center;verticalAlign=middle;resizable=0;strokeColor=none;fillColor=none;fontSize=11;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="15" width="680" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="cra" value="&lt;b&gt;Compliance Risk Assessment&lt;/b&gt;&lt;br&gt;[Software System — CSI-180236]&lt;br&gt;&lt;br&gt;&lt;font&gt;Identifies, assesses, and reports Compliance Risk for all Citi businesses. Calculates Inherent Risk, Control Environment, and Residual Risk ratings annually via the Citi Risk and Controls (CRC) platform.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;fontColor=#ffffff;strokeColor=#0e5aa0;fontSize=11;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="400" width="310" height="155" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_icrm" value="&lt;b&gt;ICRM Methodology Team&lt;/b&gt;&lt;br&gt;[Internal User]&lt;br&gt;&lt;font&gt;Administers CRA platform; oversees data collection and annual schedule&lt;/font&gt;" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="105" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_ec" value="&lt;b&gt;Enterprise Compliance Analysts&lt;/b&gt;&lt;br&gt;[Internal User]&lt;br&gt;&lt;font&gt;Preparer and Approver of risk assessments; applies qualitative overrides&lt;/font&gt;" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="105" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_biz" value="&lt;b&gt;Business Teams&lt;/b&gt;&lt;br&gt;[Internal User — First Line]&lt;br&gt;&lt;font&gt;Validates source data; provides control evidence; develops action plans&lt;/font&gt;" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="105" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_mgmt" value="&lt;b&gt;Senior Management / BRCC&lt;/b&gt;&lt;br&gt;[Internal User]&lt;br&gt;&lt;font&gt;Reviews aggregated risk reports; directs risk appetite and resources&lt;/font&gt;" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="105" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor_audit" value="&lt;b&gt;Internal Audit&lt;/b&gt;&lt;br&gt;[Internal User — Third Line]&lt;br&gt;&lt;font&gt;Provides audit findings for control assessment; uses CRA results for audit planning&lt;/font&gt;" style="shape=mxgraph.c4.person2;whiteSpace=wrap;html=1;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="120" width="150" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="up_baw" value="&lt;b&gt;Business Activity Warehouse&lt;/b&gt;&lt;br&gt;[External System — CSI-153099]&lt;br&gt;&lt;font&gt;Transactional and business activity metrics&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="315" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="up_mca" value="&lt;b&gt;Manager&#39;s Control Assessment&lt;/b&gt;&lt;br&gt;[External System — CSI-176101]&lt;br&gt;&lt;font&gt;Control design attributes, significance of impact, issue data&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="420" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="up_reg" value="&lt;b&gt;Regulatory Inventory&lt;/b&gt;&lt;br&gt;[External System — CSI-179911]&lt;br&gt;&lt;font&gt;Publication tiers and obligation mappings&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="524" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="up_icaps" value="&lt;b&gt;ICAPS&lt;/b&gt;&lt;br&gt;[External System — CSI-176041]&lt;br&gt;&lt;font&gt;Open issues and corrective action plans&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="628" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="up_cde" value="&lt;b&gt;Compliance Data Engine&lt;/b&gt;&lt;br&gt;[External System — CSI-169477]&lt;br&gt;&lt;font&gt;Aggregated compliance data and metrics&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="732" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="down_rpa" value="&lt;b&gt;GCB Xceptor RPA&lt;/b&gt;&lt;br&gt;[External System — CSI-173877]&lt;br&gt;&lt;font&gt;Automates downstream regulatory reporting and notifications&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="375" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="down_cia" value="&lt;b&gt;CIA Monitoring and Testing&lt;/b&gt;&lt;br&gt;[Internal Consumer]&lt;br&gt;&lt;font&gt;Defines compliance monitoring and testing scope from CRA results&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="488" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="down_board" value="&lt;b&gt;BRCC and Board Reporting&lt;/b&gt;&lt;br&gt;[Internal Consumer]&lt;br&gt;&lt;font&gt;Receives State of Risk reports via CBNA-GBRCC and Board of Directors governance&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;arcSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="601" width="200" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_icrm_cra" value="Administers CRA platform; manages data collection and annual schedule" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="actor_icrm" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_ec_cra" value="Prepares and approves assessments; applies qualitative overrides" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="actor_ec" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_biz_cra" value="Validates source data; submits control evidence" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="actor_biz" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cra_mgmt" value="Delivers aggregated inherent, control, and residual risk reports" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="cra" target="actor_mgmt" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_audit_cra" value="Audit findings inform control environment; uses CRA for audit planning" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;dashed=1;" parent="1" source="actor_audit" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_baw_cra" value="Business activity metrics (annual snapshot)" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="up_baw" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_mca_cra" value="Control design attributes, significance of impact, issue mapping" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="up_mca" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_reg_cra" value="Publication tiers and obligation mappings" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="up_reg" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_icaps_cra" value="Open issues and corrective action plan statuses" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="up_icaps" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cde_cra" value="Aggregated compliance data and metrics" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="up_cde" target="cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cra_rpa" value="CRA risk ratings and results for automated processing" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="cra" target="down_rpa" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cra_cia" value="Risk ratings, testing recommendations, and L2 risk flags" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="cra" target="down_cia" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_cra_board" value="Aggregated residual risk ratings for State of Risk reporting" style="edgeStyle=orthogonalEdgeStyle;html=1;fontSize=11;fontColor=#333333;" parent="1" source="cra" target="down_board" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="scope_note" value="Scope: This diagram shows the CRA system (CSI-180236) and its external relationships. It does not show internal components or technology details. All systems are internal to Citi (no internet-facing DMZ boundary required). Data sourced annually as of a single snapshot date (e.g., Oct 13, 2025)." style="text;html=1;align=left;verticalAlign=middle;resizable=0;strokeColor=#cccccc;fillColor=#ffffcc;fontSize=11;fontColor=#555555;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="835" width="680" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_title" value="&lt;b&gt;Legend&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;strokeColor=none;fillColor=none;fontSize=11;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="840" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_system" value="Primary System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;fontColor=#ffffff;strokeColor=#0e5aa0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="750" y="862" width="130" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_ext" value="External System" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6d6d6d;fontColor=#ffffff;strokeColor=#555555;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="895" y="862" width="130" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_person" value="Person / Actor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#08427B;fontColor=#ffffff;strokeColor=#073B6F;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="862" width="130" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_bidirectional" value="Bidirectional / Input-Output" style="text;html=1;align=left;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=11;fontColor=#555555;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="862" width="165" height="28" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
