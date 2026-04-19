@@ -1,0 +1,309 @@
+<mxfile host="65bd71144e">
+    <diagram id="Q5XkesNECrVj2QCFCd3k" name="Page-1">
+        <mxGraphModel dx="4631" dy="2046" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1700" pageHeight="1200" math="0" shadow="0" adaptiveColors="auto">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="&lt;font style=&quot;font-size: 20px; color: rgb(0, 0, 204);&quot;&gt;(176046)&amp;nbsp; - CIA Compliance Independent Assessment - High Level Logical Flow&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontStyle=1;fontColor=#0000CC;" parent="1" vertex="1">
+                    <mxGeometry x="-319.5" y="-60" width="980" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-container" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;ICRM User Types&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#FDEBD0;strokeColor=#AF601A;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 8;arcSize=10;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-550" y="-10" width="1520" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-senior-mgr" value="Senior Manager" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="130.5" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-co" value="Compliance Officer" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-assessor" value="Assessor&amp;nbsp;" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="-239.5" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-review-mgr" value="Review Manager" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="-310" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-issue-owner" value="Issue Owner (Business)" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="inputs-section" value="Inputs" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#E3F2FD;strokeColor=#1976D2;startSize=40;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-1320" y="230" width="740" height="1280" as="geometry"/>
+                </mxCell>
+                <mxCell id="citi-apps-group" value="Citi Internal Apps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;verticalAlign=top;fontSize=13;fontStyle=1;dashed=1;dashPattern=8 8;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="15" y="55" width="308" height="1195" as="geometry"/>
+                </mxCell>
+                <mxCell id="crc-cra" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CRA&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;• Risk Category Assessment&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• SCR Identification &amp;amp; L1-L2 Risk Ratings&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Tier 1 - Tier 2 Risk Ratings&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="30" y="100" width="275" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="mca-system" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;MCA&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• GRC Assessment Units (AUs)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• AE-AU Mapping Reports&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#DAE8FC;strokeColor=#6C8EBF;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="30" y="220" width="275" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="atpc-system" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;ATPC&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Third-Party Risk Assessment Plan&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• TP-RAP / MCA AE-AU Mapping&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="30" y="316.25" width="275" height="82.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="icrm-ae-universe" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Assessment Entity Universe&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Planning Units (PUs)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• ICRM AEs: CRA, AML, AB&amp;amp;C,&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;EWORA, ABRA, HARA&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#E8F8F5;strokeColor=#117864;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="31" y="410" width="270" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="ext-inputs-group" value="External &amp; Internal Factors" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1;dashed=1;dashPattern=8 8;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="397.5" y="490" width="300" height="350" as="geometry"/>
+                </mxCell>
+                <mxCell id="regulations" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Regulations &amp;amp; LRRPs&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Laws, Rules, Regulations &amp;amp; Policies&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Regulatory Due Diligence Data&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="410" y="730" width="275" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="risk-factors" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Risk Factors&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Consumer Complaints&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Third-Party Dependencies&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Enterprise-Wide Thematic Issues&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="410" y="530" width="275" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="data-sources" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Data Sources&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;• Data Privacy Considerations&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Applications &amp;amp; Systems Data&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="410" y="630" width="275" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="policy-mgmt" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Policy&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent;&quot;&gt;• Policy &amp;amp; Regulation Data&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• LRRP Reference Data&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="inputs-section" vertex="1">
+                    <mxGeometry x="34.5" y="1090" width="269" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="processing-section" value="Processing — CIA (176046)" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#dae8fc;strokeColor=#4D4D4D;startSize=40;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-560" y="230" width="1540" height="1280" as="geometry"/>
+                </mxCell>
+                <mxCell id="crc-core" value="CIA Core Modules" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#E4E4E4;strokeColor=#6c8ebf;verticalAlign=top;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="processing-section" vertex="1">
+                    <mxGeometry x="30" y="60" width="1480" height="1170" as="geometry"/>
+                </mxCell>
+                <mxCell id="mod-planning" value="&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;(1) Annual Planning &amp;amp; Scoping Module&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Identify Planning Units (PUs) &amp;amp; ICRM Assessment Entities (AEs)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Identify Significant Compliance Risks (SCRs) via CRC-CRA&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Develop Risk-Based Annual Coverage Plan (Monitoring &amp;amp; Testing)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Share Plan with Compliance Officers — End of Q1 | Updated Periodically&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#666666;" parent="processing-section" vertex="1">
+                    <mxGeometry x="433" y="120" width="555" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="mod-monitoring" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;(2) Compliance Monitoring Module&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Design Monitoring Assessment Activities (Objective, Procedure Steps, Outcomes)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Execute Monitoring (Ongoing, Agile, Proactive — Potential Weakness Detection)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Document Workpapers in ICRM Monitoring Module within CRC&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Review Manager Approval / Sign-Off Captured in CRC&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#D4E6F1;strokeColor=#2E86C1;" parent="processing-section" vertex="1">
+                    <mxGeometry x="49.75" y="360" width="581.5" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="mod-testing" value="&lt;span style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;(3) Compliance Testing Module&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;/span&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Scope Review — L1-L2 Risks, LRRPs, Legal Entities, Objectives&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;• Create Review Planning Document (RPD) in CRC&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;• Design Review Work Program (RWP) — Sampling / 100% / Controls Testing&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span&gt;• Execute Tests &amp;amp; Document Workpapers (Walkthroughs, Evidence, Narratives)&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#D5F5E3;strokeColor=#239B56;fontColor=#666666;labelBackgroundColor=none;" parent="processing-section" vertex="1">
+                    <mxGeometry x="923" y="350" width="555" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="exception-node" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Exception &lt;br&gt;Noted?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#FFE0B2;strokeColor=#FF9800;" parent="processing-section" vertex="1">
+                    <mxGeometry x="250.5" y="590" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="no-exception-label" value="&lt;font style=&quot;color: rgb(0, 153, 0); font-size: 12px;&quot;&gt;** NO Exception&lt;br&gt;&amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Activity Closed&lt;/font&gt;" style="text;html=1;align=left;fontSize=11;fontStyle=3;fontColor=#009900;" parent="processing-section" vertex="1">
+                    <mxGeometry x="350" y="540" width="100" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="mod-reporting" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Reporting Module&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• CMIR — Compliance Monitoring Issue Report&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Draft Reports, Metrics &amp;amp; Dashboards&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5DBDB;strokeColor=#424949;" parent="processing-section" vertex="1">
+                    <mxGeometry x="570" y="1054" width="360" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="mod-issue-mgmt" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;(4) Issue Management Module&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Root Cause Analysis (RCA) — 4Cs: Concern, Cause, Consequence, Context&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Create CMIR in CRC &amp;amp; Determine Issue Severity — Assign Issue Owner&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Obtain Corrective Action Plan (CAP): &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Planning / Compensating / Remediation / Sustainability&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Issue Draft Report within 7 Calendar Days of Test Execution End Date&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#E8DAEF;strokeColor=#7D3C98;" parent="processing-section" vertex="1">
+                    <mxGeometry x="54" y="767.5" width="573" height="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="mod-validation" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;(5) Issue Validation Module&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Track All Issues to Completion — Issue Validation Module (CRC)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Validate Completed CAP within 30 Calendar Days of CAP Target Date&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Successful Validation = Issue Closed | Failed Validation = Re-Open in iCAPS&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Issue Closure Without Validation (Issue Avoidance / Transfer) if Applicable&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fontStyle=1;fillColor=#FDEDEC;strokeColor=#E74C3C;" parent="processing-section" vertex="1">
+                    <mxGeometry x="923" y="765" width="555" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-planning-monitoring" value="2. Activates Monitoring" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976D2;fontSize=11;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="processing-section" source="mod-planning" target="mod-monitoring" edge="1">
+                    <mxGeometry x="-0.3539" y="25" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-planning-testing" value="3. Activates Testing" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976D2;fontSize=11;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="processing-section" source="mod-planning" target="mod-testing" edge="1">
+                    <mxGeometry x="0.4376" y="-21" relative="1" as="geometry">
+                        <mxPoint x="-17" y="-9" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-monitoring-exception" value="Exception Noted" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;dashed=1;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="processing-section" source="mod-monitoring" target="exception-node" edge="1">
+                    <mxGeometry x="0.45" y="-51" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-testing-exception" value="Exception Noted" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;dashed=1;fontSize=11;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="processing-section" source="mod-testing" target="exception-node" edge="1">
+                    <mxGeometry x="-0.0139" y="-15" relative="1" as="geometry">
+                        <mxPoint x="1380" y="500" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-exception-issue" value="Yes — Raise Issue" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;dashed=1;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="processing-section" source="exception-node" target="mod-issue-mgmt" edge="1">
+                    <mxGeometry x="-0.3846" y="80" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-issue-validation" value="4. Track Issue to Completion" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976D2;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="processing-section" source="mod-issue-mgmt" target="mod-validation" edge="1">
+                    <mxGeometry x="0.2297" y="-16" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-issue-reporting" value="CMIR Creation" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7B7D7D;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="processing-section" source="mod-issue-mgmt" target="mod-reporting" edge="1">
+                    <mxGeometry x="0.1185" y="16" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="consumes-section" value="CONSUMES&#xa;Citi Internal Services" style="swimlane;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;fillColor=#cce5ff;strokeColor=#36393d;startSize=60;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="999" y="228" width="430" height="1282" as="geometry"/>
+                </mxCell>
+                <mxCell id="icaps-system" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;iCAPS&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Issue Management&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• CAP Lifecycle Tracking&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Issue Re-Opening&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="consumes-section" vertex="1">
+                    <mxGeometry x="70" y="642" width="280" height="118" as="geometry"/>
+                </mxCell>
+                <mxCell id="email-notify" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Email / Notification Service&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;• Stakeholder Plan Alerts&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 13px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Issue &amp;amp; Sign-Off Notifications&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Review Completion Alerts&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="consumes-section" vertex="1">
+                    <mxGeometry x="55" y="147" width="290" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="training-system" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Training System&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-weight: normal;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Compliance Training Records&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/b&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Training Completion Status&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="consumes-section" vertex="1">
+                    <mxGeometry x="70" y="520" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="reporting-output" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Metrics &amp;amp; Reporting Outputs&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• CMIR Reports&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Coverage Plan Reports&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Exception &amp;amp; Issue Dashboards&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#D5DBDB;strokeColor=#424949;" parent="consumes-section" vertex="1">
+                    <mxGeometry x="65" y="1051" width="280" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Email / Notification Service&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;• Stakeholder Plan Alerts&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(85, 85, 85); font-size: 14px;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Issue &amp;amp; Sign-Off Notifications&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Review Completion Alerts&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="consumes-section" vertex="1">
+                    <mxGeometry x="70" y="903" width="280" height="122" as="geometry"/>
+                </mxCell>
+                <mxCell id="workflow-note" value="&lt;div style=&quot;&quot;&gt;&lt;b style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;CIA Workflow Steps&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;div style=&quot;line-height: 225%;&quot;&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;1. &lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Plan:&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Senior Manager identifies SCRs and&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;builds annual coverage plan by end of Q1.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;2. &lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Monitor:&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Assessors design and execute&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;ongoing agile monitoring; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Documented in CRC.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;3. &lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Test:&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Testing Officers scope, plan (RPD/RWP)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;and execute periodic in-depth reviews.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;4. &lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Issue:&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Exceptions trigger RCA, CMIR creation,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;severity rating and CAP from business.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;5. &lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;Validate:&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt; &lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;CAP validated within 30 days;&amp;nbsp;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Issue closed or re-opened in iCAPS.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 225%;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;&lt;font style=&quot;&quot;&gt;Outcomes:&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent; text-align: center;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;No Exception Noted / Exception Noted&lt;br&gt;&lt;/span&gt;&lt;b style=&quot;color: rgb(63, 63, 63); background-color: transparent; text-align: center;&quot;&gt;&lt;font style=&quot;&quot;&gt;Actors:&amp;nbsp;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent; text-align: center;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Senior Mgr | Compliance Officer | Assessor |&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent; text-align: center;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;Review Manager | Issue Owner (Business)&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;spacingLeft=8;spacingRight=8;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1449" y="320" width="620" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-section" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Key&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#F6FF6B;strokeColor=#FBC02D;startSize=30;gradientColor=none;swimlaneFillColor=#E6E6E6;" parent="1" vertex="1">
+                    <mxGeometry x="1529" y="1120" width="460" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-arrows-title" value="Arrow Types" style="text;html=1;align=left;fontSize=14;fontStyle=1;" parent="legend-section" vertex="1">
+                    <mxGeometry x="30" y="58.5" width="150" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-flow-label" value="Process / Data Flow" style="text;html=1;align=left;fontSize=14;" parent="legend-section" vertex="1">
+                    <mxGeometry x="110" y="86.5" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-exc-label" value="Exception Path (Triggers Issue)" style="text;html=1;align=left;fontSize=14;" parent="legend-section" vertex="1">
+                    <mxGeometry x="110" y="115.5" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-user-label" value="User Interaction" style="text;html=1;align=left;fontSize=14;" parent="legend-section" vertex="1">
+                    <mxGeometry x="110" y="144.5" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-ext-label" value="External System Integration" style="text;html=1;align=left;fontSize=14;" parent="legend-section" vertex="1">
+                    <mxGeometry x="110" y="173.5" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-input-label" value="Input Feed" style="text;html=1;align=left;fontSize=14;" parent="legend-section" vertex="1">
+                    <mxGeometry x="110" y="202.5" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-notif-label" value="Notification / Alert" style="text;html=1;align=left;fontSize=14;" parent="legend-section" vertex="1">
+                    <mxGeometry x="110" y="231.5" width="230" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-flow-line" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976D2;fontSize=14;" parent="legend-section" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="96.5" as="sourcePoint"/>
+                        <mxPoint x="100" y="96.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-exc-line" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;dashed=1;fontSize=14;" parent="legend-section" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="125.5" as="sourcePoint"/>
+                        <mxPoint x="100" y="125.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-user-line" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#17A589;fontSize=14;" parent="legend-section" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="154.5" as="sourcePoint"/>
+                        <mxPoint x="100" y="154.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-ext-line" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;fontSize=14;" parent="legend-section" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="183.5" as="sourcePoint"/>
+                        <mxPoint x="100" y="183.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-input-line" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=14;" parent="legend-section" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="212.5" as="sourcePoint"/>
+                        <mxPoint x="100" y="212.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-notif-line" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#C2185B;dashed=1;fontSize=14;" parent="legend-section" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="30" y="241.5" as="sourcePoint"/>
+                        <mxPoint x="100" y="241.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-users-planning" value="1. Define Scope &amp; Coverage Plan" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#17A589;fontSize=11;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="user-senior-mgr" target="mod-planning" edge="1">
+                    <mxGeometry x="-0.4925" y="90" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-users-monitoring" value="2. Execute Monitoring" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#17A589;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="user-assessor" target="mod-monitoring" edge="1">
+                    <mxGeometry x="-0.7234" y="59" relative="1" as="geometry">
+                        <mxPoint x="1" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-users-testing" value="3. Execute Testing" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#17A589;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="mod-testing" edge="1">
+                    <mxGeometry x="-0.7169" y="60" relative="1" as="geometry">
+                        <mxPoint y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-cra-planning" value="SCR Identification" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="crc-cra" target="mod-planning" edge="1">
+                    <mxGeometry x="-0.4259" y="15" relative="1" as="geometry">
+                        <mxPoint x="-680" y="352.5" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-mca-planning" value="AE-AU Structure" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="mca-system" target="mod-planning" edge="1">
+                    <mxGeometry x="-0.4318" y="15" relative="1" as="geometry">
+                        <mxPoint x="-680" y="387" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-atpc-planning" value="Third-Party Risk Data" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="atpc-system" target="mod-planning" edge="1">
+                    <mxGeometry x="-0.4814" y="18" relative="1" as="geometry">
+                        <mxPoint x="-680" y="415.75" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-ae-planning" value="Planning Unit Universe" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=11;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="icrm-ae-universe" target="mod-planning" edge="1">
+                    <mxGeometry x="-0.5135" y="12" relative="1" as="geometry">
+                        <mxPoint x="-680" y="429.5500000000002" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-regs-testing" value="Regulatory Data (LRRPs)" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" target="mod-testing" edge="1">
+                    <mxGeometry x="0.3774" y="14" relative="1" as="geometry">
+                        <mxPoint x="-655" y="976.5" as="sourcePoint"/>
+                        <mxPoint x="501.75" y="739" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-risk-monitoring" value="Risk Signals" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.143;entryY=1.002;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;" parent="1" source="risk-factors" target="mod-monitoring" edge="1">
+                    <mxGeometry x="0.1056" y="10" relative="1" as="geometry">
+                        <mxPoint x="-680" y="544.25" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-datasrc-monitoring" value="Data Sources" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" parent="1" source="data-sources" target="mod-monitoring" edge="1">
+                    <mxGeometry x="-0.2233" y="15" relative="1" as="geometry">
+                        <mxPoint x="-680" y="569.5500000000002" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-issue-icaps" value="Raise &amp; Track Issues" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;fontSize=11;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="mod-issue-mgmt" target="icaps-system" edge="1">
+                    <mxGeometry x="0.6626" y="13" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-validation-icaps" value="Close / Re-Open Issue" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;startArrow=classic;startFill=1;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="mod-validation" target="icaps-system" edge="1">
+                    <mxGeometry x="0.1334" y="10" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-planning-email" value="Plan Distribution" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#C2185B;dashed=1;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mod-planning" target="email-notify" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-issue-email" value="Issue Notifications" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#C2185B;dashed=1;fontSize=11;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="mod-issue-mgmt" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-policy-testing" value="Policy &amp; Regulation Data" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;fontSize=11;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="policy-mgmt" target="mod-testing" edge="1">
+                    <mxGeometry x="0.8752" y="10" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-1171" y="1240"/>
+                            <mxPoint x="130" y="1240"/>
+                            <mxPoint x="130" y="693"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-reporting-mod" value="Reports &amp; Metrics" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7B7D7D;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="mod-reporting" target="reporting-output" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-training-monitoring" value="Training Data" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="training-system" target="mod-monitoring" edge="1">
+                    <mxGeometry x="-0.6315" y="-11" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="Compliance&lt;br&gt;Testing Officer" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="620.5" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Review Manager" style="shape=actor;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;fontSize=14;verticalAlign=bottom;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="94" width="40" height="55" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
