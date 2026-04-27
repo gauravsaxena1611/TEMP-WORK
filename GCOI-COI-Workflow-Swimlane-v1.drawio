@@ -1,0 +1,364 @@
+<mxfile host="65bd71144e">
+    <diagram id="gcoi-coi-workflow-v1" name="Page-1">
+        <mxGraphModel dx="3002" dy="1552" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3800" pageHeight="1700" math="0" shadow="0" adaptiveColors="auto">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Global Conflicts of Interest (GCOI) — Detailed Workflow  |  CSI ID: 180418" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontStyle=1;fontColor=#0000CC;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="-195" width="3075" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="Scope: COI Creation by any Citi Employee — Risk &amp;amp; Control Enrichment — CIBA Review &amp;amp; Credible Challenge — Active &amp;amp; Ongoing Monitoring — Retirement" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=2;fontColor=#555555;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="-143" width="3085" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-trigger" value="Triggering&#xa;Events" style="swimlane;startSize=140;fillColor=#F2F3F4;strokeColor=#777777;fontSize=14;fontStyle=1;horizontal=0;swimlaneHead=0;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="-105" width="3110" height="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="start-event" value="&lt;b&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;START&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#00AA44;strokeColor=#007733;fontColor=#FFFFFF;fontSize=10;fontStyle=1;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="177" y="30" width="62" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="trig-conflict" value="Citi Employee identifies&lt;br&gt;&lt;b&gt;Conflict of Interest&lt;/b&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85);&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#777777;dashed=1;dashPattern=6 3;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="262" y="18" width="200" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="trig-policy" value="Conflict &lt;b&gt;NOT covered&lt;/b&gt; by&lt;br/&gt;existing Citi policies&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#555;&quot;&gt;Requires formal GCOI declaration&lt;br/&gt;per regulatory obligation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#777777;dashed=1;dashPattern=6 3;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="482" y="18" width="200" height="86" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-start-c1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00AA44;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-trigger" source="start-event" target="trig-conflict" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-c1-c2" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#777777;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-trigger" source="trig-conflict" target="trig-policy" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-emp" value="Any Citi Employee&#xa;(Initiator)" style="swimlane;startSize=140;fillColor=#FEF9E7;strokeColor=#F39C12;fontSize=14;fontStyle=1;horizontal=0;swimlaneHead=0;fontColor=#1A1A1A;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="60" width="3110" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="emp-login" value="&lt;b&gt;1. Log into GCOI UI&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#7D6608;&quot;&gt;Access via Angular web UI.&lt;br/&gt;Any Citi or CRC employee&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FDEBD0;strokeColor=#F39C12;fontColor=#7D6608;" parent="lane-emp" vertex="1">
+                    <mxGeometry x="386" y="70" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="emp-create" value="&lt;b&gt;2. Create New COI Record&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#7D6608;&quot;&gt;Enter conflict nature, parties,&lt;br/&gt;role and context details&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FDEBD0;strokeColor=#F39C12;fontColor=#7D6608;" parent="lane-emp" vertex="1">
+                    <mxGeometry x="559" y="70" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="emp-save" value="&lt;b&gt;3. Save COI Record&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#7D6608;&quot;&gt;Record enters R&amp;amp;C queue.&lt;br/&gt;Status: &lt;b style=&quot;color:#CC0000;&quot;&gt;DRAFT&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FDEBD0;strokeColor=#F39C12;fontColor=#7D6608;" parent="lane-emp" vertex="1">
+                    <mxGeometry x="731" y="70" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="emp-rework" value="&lt;b&gt;(Rework) Review Correction Notes&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#7D6608;&quot;&gt;Reads CIBA feedback email.&lt;br/&gt;Informs R&amp;amp;C team of required changes&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F9E79F;strokeColor=#F39C12;fontColor=#7D6608;dashed=1;dashPattern=6 3;" parent="lane-emp" vertex="1">
+                    <mxGeometry x="2325" y="70" width="190" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-emp-login-create" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#F39C12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-emp" source="emp-login" target="emp-create" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-emp-create-save" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#F39C12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-emp" source="emp-create" target="emp-save" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-sys" value="GCOI System&#xa;(Automated)" style="swimlane;startSize=140;fillColor=#EAF2FF;strokeColor=#5B9BD5;fontSize=14;fontStyle=1;horizontal=0;swimlaneHead=0;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="260" width="3110" height="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys-store" value="COI Stored in DB&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#2C5F8A;&quot;&gt;Status = DRAFT · Record ID assigned&lt;br/&gt;Audit trail initialised&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-sys" vertex="1">
+                    <mxGeometry x="587" y="22" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys-email-rc" value="📧 Email → Risk &amp;amp; Control Team&lt;br&gt;&lt;font style=&quot;font-size: 9px; color: rgb(44, 95, 138);&quot;&gt;New COI assigned. Enrichment required.&lt;br&gt;Employee&#39;s business R&amp;amp;C alerted&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-sys" vertex="1">
+                    <mxGeometry x="788" y="22" width="180" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys-under-review" value="Status → UNDER REVIEW&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#2C5F8A;&quot;&gt;COI submitted to CIBA.&lt;br/&gt;Audit trail updated&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-sys" vertex="1">
+                    <mxGeometry x="1520" y="23" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys-email-return" value="📧 Email → Business Team&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#2C5F8A;&quot;&gt;COI Returned. Correction notes attached.&lt;br/&gt;Rework required — action by R&amp;amp;C&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#F1948A;strokeColor=#C0392B;fontColor=#7B241C;" parent="lane-sys" vertex="1">
+                    <mxGeometry x="2325" y="22" width="190" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys-active" value="Status → ACTIVE &amp;amp; ONGOING&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#2C5F8A;&quot;&gt;COI on Watch List.&lt;br/&gt;Ongoing monitoring begins&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-sys" vertex="1">
+                    <mxGeometry x="2565" y="22" width="175" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sys-retired" value="Status → RETIRED / ELIMINATED&lt;br/&gt;&lt;font style=&quot;font-size:9px;color:#2C5F8A;&quot;&gt;COI archived. Removed from&lt;br/&gt;active inventory in COI DB&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-sys" vertex="1">
+                    <mxGeometry x="2894" y="22" width="190" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-rc" value="Risk &amp;amp; Control Team&#xa;(Enricher)" style="swimlane;startSize=140;fillColor=#D5F5E3;strokeColor=#239B56;fontSize=14;fontStyle=1;horizontal=0;swimlaneHead=0;fontColor=#1A1A1A;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="375" width="3110" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-receive" value="Receive Email Notification&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A5C32;&quot;&gt;New COI in queue. Assigned to&lt;br/&gt;employee&#39;s business R&amp;amp;C team&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A5C32;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="670" y="75" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-login" value="&lt;b&gt;4. Log in &amp;amp; Open COI&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A5C32;&quot;&gt;Access GCOI review page.&lt;br/&gt;Open COI from review queue&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A5C32;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="840" y="75" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-mca" value="&lt;b&gt;5. Link MCAs&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A5C32;&quot;&gt;Attach Manager&#39;s Control&lt;br/&gt;Assessments — via &lt;b&gt;SFTP&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A5C32;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="1010" y="75" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-policy" value="&lt;b&gt;6. Associate Policies&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A5C32;&quot;&gt;Link internal Citi policies&lt;br/&gt;via Policy REST API&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A5C32;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="1180" y="75" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-refdata" value="&lt;b&gt;7. Add Reference Data&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A5C32;&quot;&gt;Risk Taxonomy · Product Info&lt;br/&gt;Entitlements · Other context&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A5C32;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="1350" y="75" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-submit" value="&lt;b&gt;8. Submit COI to CIBA&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#145A32;&quot;&gt;Full enriched package submitted&lt;br/&gt;for formal compliance review&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#58D68D;strokeColor=#239B56;fontColor=#145A32;fontStyle=1;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="1525" y="75" width="155" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="rc-rework" value="&lt;b&gt;(Rework) Update &amp;amp; Resubmit COI&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A5C32;&quot;&gt;Correct per CIBA notes: update MCAs,&lt;br/&gt;policies, or reference data. Resubmit.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A5C32;dashed=1;dashPattern=6 3;" parent="lane-rc" vertex="1">
+                    <mxGeometry x="2055" y="75" width="200" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rc-rcv-login" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-rc" source="rc-receive" target="rc-login" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rc-login-mca" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-rc" source="rc-login" target="rc-mca" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rc-mca-policy" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-rc" source="rc-mca" target="rc-policy" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rc-policy-ref" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-rc" source="rc-policy" target="rc-refdata" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rc-ref-submit" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-rc" source="rc-refdata" target="rc-submit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-rcrw-submit" value="Resubmit" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;fontSize=10;fontStyle=1;dashed=1;dashPattern=6 3;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#CC0000;" parent="lane-rc" source="rc-rework" target="rc-submit" edge="1">
+                    <mxGeometry x="-0.4285" y="-17" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lane-ciba" value="CIBA Team (Checker)&#xa;Conflicts &amp;amp; Information&#xa;Barrier Advisory" style="swimlane;startSize=140;fillColor=#EBF5FB;strokeColor=#2E86C1;fontSize=14;fontStyle=1;horizontal=0;swimlaneHead=0;fontColor=#1A1A1A;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="585" width="3110" height="225" as="geometry"/>
+                </mxCell>
+                <mxCell id="ciba-open" value="&lt;b&gt;9. Open COI Package&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A3A5C;&quot;&gt;CIBA analyst opens submitted COI.&lt;br/&gt;Reviews all enriched data&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-ciba" vertex="1">
+                    <mxGeometry x="1715" y="80" width="160" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ciba-verify" value="&lt;b&gt;10. Verify Details&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A3A5C;&quot;&gt;Check parties, names, structures&lt;br/&gt;vs internal &amp;amp; external databases&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-ciba" vertex="1">
+                    <mxGeometry x="1895" y="80" width="160" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ciba-xref" value="&lt;b&gt;11. Cross-Reference Systems&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A3A5C;&quot;&gt;Search for existing relationships&lt;br/&gt;business may not be aware of&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-ciba" vertex="1">
+                    <mxGeometry x="2075" y="80" width="160" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="ciba-challenge" value="&lt;b&gt;12. Apply Credible Challenge&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#1A3A5C;&quot;&gt;Challenge assumptions · ensure&lt;br/&gt;completeness &amp;amp; accuracy of submission&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-ciba" vertex="1">
+                    <mxGeometry x="2255" y="80" width="165" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw-decision" value="&lt;b&gt;Accept?&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:9px;&quot;&gt;Info correct&lt;br/&gt;&amp;amp; complete?&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fontStyle=1;fillColor=#FCF3CF;strokeColor=#D4AC0D;" parent="lane-ciba" vertex="1">
+                    <mxGeometry x="2445" y="57" width="110" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-ciba-open-verify" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-ciba" source="ciba-open" target="ciba-verify" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-ciba-verify-xref" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-ciba" source="ciba-verify" target="ciba-xref" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-ciba-xref-challenge" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-ciba" source="ciba-xref" target="ciba-challenge" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-ciba-challenge-gw" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-ciba" source="ciba-challenge" target="gw-decision" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-lc" value="Lifecycle &amp;amp;&#xa;Monitoring" style="swimlane;startSize=140;fillColor=#F4ECF7;strokeColor=#7B1FA2;fontSize=14;fontStyle=1;horizontal=0;swimlaneHead=0;fontColor=#1A1A1A;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="810" width="3110" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="lc-active" value="&lt;b&gt;COI Active &amp;amp; Ongoing&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#4A235A;&quot;&gt;Entities placed on Watch List.&lt;br/&gt;Ongoing monitoring in force.&lt;br/&gt;Periodic review as required.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D7BDE2;strokeColor=#7B1FA2;fontColor=#4A235A;" parent="lane-lc" vertex="1">
+                    <mxGeometry x="2565" y="31" width="175" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw-retire" value="Conflict&lt;br/&gt;Resolved?&lt;br/&gt;Retire?" style="rhombus;whiteSpace=wrap;html=1;fontSize=9;fontStyle=1;fillColor=#FCF3CF;strokeColor=#D4AC0D;" parent="lane-lc" vertex="1">
+                    <mxGeometry x="2776" y="23" width="95" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="lc-retire" value="&lt;b&gt;Initiate Retirement&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:10px;color:#4A235A;&quot;&gt;Conflict no longer relevant.&lt;br/&gt;Formally retire COI record&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D7BDE2;strokeColor=#7B1FA2;fontColor=#4A235A;" parent="lane-lc" vertex="1">
+                    <mxGeometry x="2900" y="36" width="175" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="end-ongoing" value="&lt;b&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;END&lt;br/&gt;Ongoing&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#339966;strokeColor=#006633;fontColor=#FFFFFF;fontSize=9;fontStyle=1;" parent="lane-lc" vertex="1">
+                    <mxGeometry x="2620" y="134" width="65" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="end-retired" value="&lt;b&gt;&lt;font color=&quot;#FFFFFF&quot;&gt;END&lt;br/&gt;Retired&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#555555;strokeColor=#333333;fontColor=#FFFFFF;fontSize=9;fontStyle=1;" parent="lane-lc" vertex="1">
+                    <mxGeometry x="2955" y="131" width="65" height="68" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-lc-active-gw" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7B1FA2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-lc" source="lc-active" target="gw-retire" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-gw-retire-lc" value="Yes" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7B1FA2;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-lc" source="gw-retire" target="lc-retire" edge="1">
+                    <mxGeometry x="-0.0116" y="-19" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-lc-retire-end" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#555555;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="lane-lc" source="lc-retire" target="end-retired" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2997.5" y="118" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-lc-active-end" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#339966;dashed=1;dashPattern=4 4;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="lane-lc" source="lc-active" target="end-ongoing" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2652.5" y="121" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xl-trig-emp" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00AA44;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="trig-policy" target="emp-login" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="572" y="30"/>
+                            <mxPoint x="454" y="30"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xl-emp-sys-store" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="emp-save" target="sys-store" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-sys-store-email" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#5B9BD5;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sys-store" target="sys-email-rc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-sys-rc-rcv" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="sys-email-rc" target="rc-receive" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-rc-submit-sysur" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#5B9BD5;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="rc-submit" target="sys-under-review" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-rc-ciba" value="Submit for CIBA Review" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;fontSize=10;fontStyle=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="rc-submit" target="ciba-open" edge="1">
+                    <mxGeometry x="0.1" y="12" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="1592" y="620"/>
+                            <mxPoint x="1785" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xl-gw-sysactive" value="Accept" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;fontSize=10;fontStyle=1;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontColor=#1A7A42;" parent="1" source="gw-decision" target="sys-active" edge="1">
+                    <mxGeometry x="0.1692" y="-43" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xl-gw-lcactive" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="gw-decision" target="lc-active" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="2490" y="780"/>
+                            <mxPoint x="2643" y="780"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xl-gw-sysemail-ret" value="Return&lt;br&gt;Corrections Required" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;fontSize=10;fontStyle=1;dashed=1;dashPattern=6 3;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontColor=#CC0000;align=left;" parent="1" source="gw-decision" target="sys-email-return" edge="1">
+                    <mxGeometry x="0.5895" y="-15" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;NO&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#CC0000;" vertex="1" connectable="0" parent="xl-gw-sysemail-ret">
+                    <mxGeometry x="-0.5705" y="1" relative="1" as="geometry">
+                        <mxPoint x="16" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xl-sysret-emprw" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=6 3;" parent="1" source="sys-email-return" target="emp-rework" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-sysret-rcrw" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=6 3;" parent="1" source="sys-email-return" target="rc-rework" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-sysactive-sysret" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="sys-active" target="sys-retired" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="xl-lcret-sysret" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="lc-retire" target="sys-retired" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="datasvc-note" value="&lt;b&gt;External Data Services consumed&lt;br/&gt;during Enrichment (Steps 5–7):&lt;/b&gt;&lt;br/&gt;&lt;font style=&quot;font-size:11px;&quot;&gt;• MCA Control Data — via &lt;b&gt;SFTP&lt;/b&gt;&lt;br/&gt;• Policy Data Service — &lt;b&gt;REST API&lt;/b&gt;&lt;br/&gt;• Common Ref Data Services —&lt;br/&gt;&amp;nbsp;&amp;nbsp;Risk Taxonomy · Entitlement · Email&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontSize=12;align=left;spacingLeft=8;perimeter=calloutPerimeter;size=15;position=0.5;direction=south;" parent="1" vertex="1">
+                    <mxGeometry x="1480" y="1060" width="260" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor-note" value="&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size:20px;&quot;&gt;Actors &amp;amp; Roles&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;div style=&quot;text-align:left;line-height:190%;font-size:14px;&quot;&gt;&lt;b&gt;Any Citi Employee (Initiator):&lt;/b&gt; Identifies the conflict of interest. Logs into GCOI Angular UI, creates and saves the COI record (Steps 1–3). Receives email notification on return and informs R&amp;amp;C of required changes.&lt;br/&gt;&lt;b&gt;Risk &amp;amp; Control Team (Enricher):&lt;/b&gt; Receives email notification on new COI. Opens record from review queue, enriches it by linking MCAs (SFTP), internal policies (REST API) and reference data (Steps 4–7), then submits the complete package to CIBA (Step 8). On return, updates and resubmits.&lt;br/&gt;&lt;b&gt;CIBA Team (Checker):&lt;/b&gt; Opens enriched COI, verifies parties and details against internal/external databases, cross-references existing relationships, applies Credible Challenge to ensure completeness and accuracy (Steps 9–12), then makes the final Accept or Return decision.&lt;br/&gt;&lt;b&gt;GCOI System (COI Service):&lt;/b&gt; Single backend service managing all business logic. Persists records to COI DB, fires email triggers (on Create → R&amp;amp;C; on Return → Business Team), manages all status transitions, and provides an Export Service for audit reports.&lt;br/&gt;&lt;b&gt;Lifecycle &amp;amp; Monitoring:&lt;/b&gt; Active COIs are placed on the Watch List for ongoing monitoring. When conflict is fully resolved, a user (R&amp;amp;C or CIBA) initiates retirement — COI is formally eliminated from the active inventory.&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#EBF5FB;strokeColor=#2E86C1;align=left;spacingLeft=14;spacingRight=14;spacingTop=10;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="1048" width="1450" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="status-note" value="&lt;b&gt;&lt;font style=&quot;font-size:17px;&quot;&gt;COI Status Lifecycle&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;div style=&quot;text-align:left;font-size:13px;line-height:210%;&quot;&gt;⬤ &lt;b&gt;DRAFT&lt;/b&gt; — Created and saved by employee. Not yet reviewed.&lt;br/&gt;⬤ &lt;b&gt;UNDER REVIEW&lt;/b&gt; — Enriched by R&amp;amp;C and submitted to CIBA.&lt;br/&gt;⬤ &lt;b&gt;RETURNED&lt;/b&gt; — CIBA requires corrections. Sent back to business team for rework.&lt;br/&gt;⬤ &lt;b&gt;ACTIVE &amp;amp; ONGOING&lt;/b&gt; — Formally accepted by CIBA. Placed on Watch List. Monitored.&lt;br/&gt;⬤ &lt;b&gt;RETIRED / ELIMINATED&lt;/b&gt; — Conflict resolved. Removed from active inventory.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#FEF9E7;strokeColor=#F39C12;align=left;spacingLeft=14;spacingRight=14;spacingTop=10;" parent="1" vertex="1">
+                    <mxGeometry x="1770" y="1048" width="550" height="265" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-box" value="Key" style="swimlane;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;startSize=30;swimlaneFillColor=#EEEEEE;" parent="1" vertex="1">
+                    <mxGeometry x="2340" y="1048" width="760" height="305" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDEBD0;strokeColor=#F39C12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="18" y="48" width="76" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A9DFBF;strokeColor=#239B56;" parent="legend-box" vertex="1">
+                    <mxGeometry x="18" y="84" width="76" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9DC3E6;strokeColor=#2E86C1;" parent="legend-box" vertex="1">
+                    <mxGeometry x="18" y="120" width="76" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D7BDE2;strokeColor=#7B1FA2;" parent="legend-box" vertex="1">
+                    <mxGeometry x="18" y="156" width="76" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BDD7EE;strokeColor=#2E75B6;" parent="legend-box" vertex="1">
+                    <mxGeometry x="18" y="192" width="76" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1948A;strokeColor=#C0392B;" parent="legend-box" vertex="1">
+                    <mxGeometry x="18" y="228" width="76" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-sw7" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#D4AC0D;" parent="legend-box" vertex="1">
+                    <mxGeometry x="28" y="262" width="46" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt1" value="Any Citi Employee (Initiator) Tasks" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="54" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt2" value="Risk &amp;amp; Control Team (Enricher) Tasks" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="90" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt3" value="CIBA Team (Checker) Tasks" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="126" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt4" value="Lifecycle &amp;amp; Monitoring Actions" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="162" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt5" value="GCOI System Automated Actions" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="198" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt6" value="Return / Rework Path (Exception)" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="234" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt7" value="Decision Gateway (XOR)" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="102" y="270" width="310" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-arr1" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#333333;" parent="legend-box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="68" as="sourcePoint"/>
+                        <mxPoint x="556" y="68" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-arr2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;" parent="legend-box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="100" as="sourcePoint"/>
+                        <mxPoint x="556" y="100" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-arr3" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#5B9BD5;dashed=1;" parent="legend-box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="132" as="sourcePoint"/>
+                        <mxPoint x="556" y="132" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-arr4" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E74C3C;dashed=1;dashPattern=6 3;" parent="legend-box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="164" as="sourcePoint"/>
+                        <mxPoint x="556" y="164" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-alab1" value="Main Process Flow" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="58" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-alab2" value="Cross-Functional Handoff" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="90" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-alab3" value="System / DB Integration Feed" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="122" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-alab4" value="Return / Rework Path" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="154" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-ev1" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#00AA44;strokeColor=#007733;" parent="legend-box" vertex="1">
+                    <mxGeometry x="476" y="192" width="28" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-ev2" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#339966;strokeColor=#006633;" parent="legend-box" vertex="1">
+                    <mxGeometry x="476" y="224" width="28" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-ev3" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#555555;strokeColor=#333333;" parent="legend-box" vertex="1">
+                    <mxGeometry x="514" y="224" width="28" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-elab1" value="Start Event" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="186" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-elab2" value="End: Ongoing  /  End: Retired" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="218" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-elab3" value="Optional (No Retire) path" style="text;html=1;align=left;fontSize=12;" parent="legend-box" vertex="1">
+                    <mxGeometry x="564" y="250" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-arr5" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#339966;dashed=1;dashPattern=4 4;" parent="legend-box" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="260" as="sourcePoint"/>
+                        <mxPoint x="556" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

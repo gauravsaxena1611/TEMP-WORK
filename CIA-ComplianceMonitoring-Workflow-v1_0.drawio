@@ -1,0 +1,373 @@
+<mxfile host="65bd71144e">
+    <diagram id="cm-wf-v1" name="Page-1">
+        <mxGraphModel dx="4117" dy="2046" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="3500" pageHeight="1800" math="0" shadow="0" adaptiveColors="auto">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Compliance Monitoring Module — Detailed Workflow | CIA (176046)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontColor=#0000CC;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="-215" width="2185" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="Module Scope: Ongoing surveillance of business processes and controls (metrics-based or targeted assessments) against Laws, Rules, Regulations and Policies (LRRPs) — from Scoping through to Issue/CAP creation in iCAPS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontStyle=2;fontColor=#555555;" parent="1" vertex="1">
+                    <mxGeometry x="15" y="-168" width="2195" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-trigger" value="Triggering&#xa;Events" style="swimlane;startSize=140;fillColor=#F2F3F4;strokeColor=#777777;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="-140" width="2220" height="195" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-start" value="&lt;b&gt;&lt;font style=&quot;color: rgb(230, 230, 230);&quot;&gt;START&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#00AA44;strokeColor=#007733;fontColor=#FFFFFF;fontSize=10;fontStyle=1;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="512.5" y="40" width="50" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-trig-cra" value="CRA Results&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#555;&#39;&gt;L1-L2 Risk Ratings; SCR Identification;&lt;br/&gt;Tier 1-Tier 2 Risk Categories&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#777777;dashed=1;dashPattern=6 3;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="220" y="120" width="175" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-trig-pub" value="Publications &amp;amp; Consumer Complaints&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#555;&#39;&gt;LRRPs, Policies, Complaint Data;&lt;br/&gt;Enterprise-Wide Thematic Issues&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#777777;dashed=1;dashPattern=6 3;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="440" y="120" width="195" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-trig-tp" value="Third-Party Risk Factors&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#555;&#39;&gt;TP-RAP, ATPC, MCA AE-AU Mapping;&lt;br/&gt;Data Privacy, Applications Data&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#777777;dashed=1;dashPattern=6 3;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="685" y="120" width="185" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-trig-plan" value="Risk-Based Coverage Plan&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#555;&#39;&gt;Senior Manager shares annual view&lt;br/&gt;with COs by end of Q1; Annual/Quarterly&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#F2F3F4;strokeColor=#777777;dashed=1;dashPattern=6 3;" parent="lane-trigger" vertex="1">
+                    <mxGeometry x="920" y="120" width="195" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-start-cra" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00AA44;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="lane-trigger" source="cm-start" target="cm-trig-cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-start-pub" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00AA44;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="lane-trigger" source="cm-start" target="cm-trig-pub" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-start-tp" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#00AA44;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="lane-trigger" source="cm-start" target="cm-trig-tp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-coord" value="Monitoring Coordinator&#xa;/ Monitoring Champion&#xa;(ICRM EC &amp; MU Level)" style="swimlane;startSize=140;fillColor=#D4E6F1;strokeColor=#2E86C1;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;fontColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="55" width="2220" height="215" as="geometry"/>
+                </mxCell>
+                <mxCell id="coord-ec" value="&lt;b&gt;1a. ICRM EC Context Setup&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(26, 58, 92);&quot;&gt;Select Planning Units (PUs); &lt;br&gt;Monitoring Unit;&lt;br&gt;Country of Execution; &lt;br&gt;Owner&#39;s Managed Geography;&lt;br&gt;Legal Entity aligned to Monitoring Execution&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#AED6F1;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-coord" vertex="1">
+                    <mxGeometry x="200" y="45" width="185" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="coord-cra" value="&lt;b&gt;1b. Review CRA &amp;amp; Inputs&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A3A5C;&#39;&gt;Evaluate CRA results, Publications &amp;amp;&lt;br/&gt;Consumer Complaints data;&lt;br/&gt;Identify Significant Compliance Risks (SCRs)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#AED6F1;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-coord" vertex="1">
+                    <mxGeometry x="440" y="60" width="185" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="coord-coverage" value="&lt;b&gt;1c. Develop Coverage Plan&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A3A5C;&#39;&gt;Prepare risk-based Coverage Plan for SCRs;&lt;br/&gt;Plan Coverage Report (validate GRC Risk&lt;br/&gt;Taxonomy &amp;amp; Publications by AEs)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#AED6F1;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-coord" vertex="1">
+                    <mxGeometry x="680" y="60" width="185" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="coord-baseline" value="&lt;b&gt;1d. Lock &amp;amp; Baseline Plans&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(26, 58, 92);&quot;&gt;&lt;b&gt;Coordinator:&lt;/b&gt; Can create, approve routines &amp;amp; lock/baseline Plans&lt;br&gt;&lt;b&gt;Champion:&lt;/b&gt; Same as Coordinator except CANNOT Baseline Plans&lt;br&gt;Notification of Coverage Gaps; &lt;br&gt;Download Attestations&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#AED6F1;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-coord" vertex="1">
+                    <mxGeometry x="920" y="45" width="245" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="coord-outside" value="&lt;b&gt;CMIR Outside Monitoring&lt;/b&gt; &lt;font style=&quot;font-size: 10px; color: rgb(204, 51, 0);&quot;&gt;(Alternate Path)&lt;br&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(26, 58, 92);&quot;&gt;Expedited Issue Report path: when CM Issue is raised&lt;br&gt;WITHOUT the full Scoping / Design / Execution lifecycle&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFF9C4;strokeColor=#F9A825;fontColor=#7D4809;dashed=1;dashPattern=6 3;" parent="lane-coord" vertex="1">
+                    <mxGeometry x="1720" y="50" width="280" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-coord-ec-cra" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-coord" source="coord-ec" target="coord-cra" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-coord-cra-cov" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-coord" source="coord-cra" target="coord-coverage" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-coord-cov-base" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#2E86C1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-coord" source="coord-coverage" target="coord-baseline" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-preparer" value="Procedure Preparer&#xa;(ICRM Staff)" style="swimlane;startSize=140;fillColor=#D5F5E3;strokeColor=#239B56;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;fontColor=#1A1A1A;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="270" width="2220" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-step1" value="&lt;b&gt;2. Scoping (Pre-Planning)&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(26, 92, 50);&quot;&gt;Define Procedure Scope: &lt;br&gt;AEs based on CRA ratings,&lt;br&gt;GRC Risks, Publications &amp;amp; Policies, DSMT Segment &amp;amp; Geography; &lt;br&gt;Coverage Reports &amp;amp; Dashboards&lt;br&gt;(AE, GRC Risk, Monitoring Drivers, Regs, Policies)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A1A1A;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="200" y="20" width="185" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-step2" value="&lt;b&gt;3. Planning&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A5C32;&#39;&gt;Define Procedure Ownership &amp;amp; Execution Timeline;&lt;br/&gt;Plan Workflow (Maker-Checker);&lt;br/&gt;Plan Reports: Quarterly &amp;amp; Annual;&lt;br/&gt;Adding MLEs, AUs, DSMT Geo to Procedure;&lt;br/&gt;AE Coverage; Clone/Deactivate Procedures;&lt;br/&gt;Audit Logs, PDF Export&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A1A1A;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="445" y="20" width="185" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-step3" value="&lt;b&gt;4. Design&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A5C32;&#39;&gt;Create Procedure Steps;&lt;br/&gt;Link GRC Activity;&lt;br/&gt;Link Application CSI ID / Vendor Details;&lt;br/&gt;Design Workflow (Maker-Checker);&lt;br/&gt;Add Business Controls;&lt;br/&gt;Design Enhancements: Third-Party Identifiers;&lt;br/&gt;Design Export&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A1A1A;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="690" y="20" width="185" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-step4" value="&lt;b&gt;5. Execution&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(26, 92, 50);&quot;&gt;Execute monitoring procedures as designed;&lt;br&gt;Document Execution Outcome;&lt;br&gt;Log Exceptions; &lt;br&gt;Execute Execution Workflow;&lt;br&gt;Issue Cancellations &lt;br&gt;(revised action taken);&lt;br&gt;Upload Documentation post Cancellation;&lt;br&gt;Snapshot Historical Plan/Design/Attestations;&lt;br&gt;Generate Reports for Non-Responsive Routines;&lt;br&gt;Audit Logs, PDF Export&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A1A1A;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="935" y="10" width="185" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw-exc" value="Exceptions&#xa;Noted?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fontStyle=1;fillColor=#FCF3CF;strokeColor=#D4AC0D;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1222.5" y="80" width="90" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-end-no-exc" value="&lt;b&gt;&lt;font&gt;&lt;font style=&quot;font-size: 12px; color: rgb(230, 230, 230);&quot;&gt;END&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(230, 230, 230);&quot;&gt;No Exception&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(230, 230, 230);&quot;&gt;Activity Closed&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#339966;strokeColor=#006633;fontColor=#FFFFFF;fontSize=9;fontStyle=1;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1440" y="20" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-step5" value="&lt;b&gt;6. Exceptions&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A5C32;&#39;&gt;Raise exceptions; tag business entities:&lt;br/&gt;GRC risks, publications &amp;amp; Policies etc.;&lt;br/&gt;Log exception details in CRC Monitoring Module&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A1A1A;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1175" y="250" width="185" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="gw-issue" value="Issue&#xa;Required?" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fontStyle=1;fillColor=#FCF3CF;strokeColor=#D4AC0D;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1425" y="263" width="85" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-no-issue" value="Confirm No Issue Required&lt;br/&gt;&lt;font style=&#39;font-size:9px;color:#555;&#39;&gt;Document reasoning in CRC Monitoring Module&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#D5F5E3;strokeColor=#239B56;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1560" y="130" width="165" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-end-no-issue" value="&lt;b&gt;&lt;font style=&quot;color: rgb(230, 230, 230);&quot;&gt;END&lt;br&gt;No Issue&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#339966;strokeColor=#006633;fontColor=#FFFFFF;fontSize=9;fontStyle=1;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1607.5" y="20" width="70" height="72.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="cm-step6" value="&lt;b&gt;7. Create CMIR in CRC&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(26, 92, 50);&quot;&gt;Compliance Monitoring Issue Report created;&lt;br&gt;Create Issue/CAPs in iCAPS;&lt;br&gt;Send Publications/Obligations to iCAPS;&lt;br&gt;Send Issues Severity Rating to iCAPS;&lt;br&gt;Update CMIR Workflow; &lt;br&gt;Refresh from iCAPS to CM;&lt;br&gt;CMIR Past Due Rationale/Mitigation Steps;&lt;br&gt;Audit Logs / PDF Export&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#A9DFBF;strokeColor=#239B56;fontColor=#1A1A1A;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1595" y="231" width="235" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="icaps-zone" value="ICAPS in CRC" style="swimlane;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;strokeWidth=2;dashed=1;startSize=25;fontSize=11;fontStyle=1;fontColor=#E65100;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1861" y="227" width="245" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="icaps-caps" value="&lt;b&gt;Issue &amp;amp; Corrective Action Plans&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#7D4809;&#39;&gt;Issue raised; status set to OPEN;&lt;br/&gt;Assigned to Issue Owner;&lt;br/&gt;CAP types: Planning / Compensating /&lt;br/&gt;Remediation / Sustainability tracked to completion&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#FFE0B2;strokeColor=#E65100;" parent="icaps-zone" vertex="1">
+                    <mxGeometry x="20" y="28" width="215" height="102" as="geometry"/>
+                </mxCell>
+                <mxCell id="exit-imv-prep" value="&lt;b&gt;Issue Management &amp;amp; Validation Module&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#F8CECC;strokeColor=#B85450;fontColor=#990000;fontStyle=1;" parent="lane-preparer" vertex="1">
+                    <mxGeometry x="1930" y="70" width="230" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s1-s2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-preparer" source="cm-step1" target="cm-step2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s2-s3" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-preparer" source="cm-step2" target="cm-step3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s3-s4" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="lane-preparer" source="cm-step3" target="cm-step4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s4-gw" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-preparer" source="cm-step4" target="gw-exc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-gw-no-exc" value="No Exception" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;fontSize=10;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="lane-preparer" source="gw-exc" target="cm-end-no-exc" edge="1">
+                    <mxGeometry x="0.3203" y="15" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-gw-exc-yes" value="Yes" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC0000;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="lane-preparer" source="gw-exc" target="cm-step5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s5-gw2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#239B56;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-preparer" source="cm-step5" target="gw-issue" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-gw2-no-issue" value="No Issue Required" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#888888;fontSize=10;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;dashed=1;" parent="lane-preparer" source="gw-issue" target="cm-no-issue" edge="1">
+                    <mxGeometry x="0.2" y="-10" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-no-issue-end" value="" style="endArrow=classic;html=1;strokeWidth=1;strokeColor=#888888;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="lane-preparer" source="cm-no-issue" target="cm-end-no-issue" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-gw2-yes-cmir" value="Issue Confirmed" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC0000;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-preparer" source="gw-issue" target="cm-step6" edge="1">
+                    <mxGeometry x="-0.1" y="10" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-cmir-icaps" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#E65100;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="lane-preparer" source="cm-step6" target="icaps-caps" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-icaps-exit" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#B85450;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="lane-preparer" source="icaps-zone" target="exit-imv-prep" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-reviewer" value="Procedure Reviewer&#xa;/ Review Manager&#xa;(Maker-Checker Approver)" style="swimlane;startSize=140;fillColor=#EBF5FB;strokeColor=#2E86C1;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="710" width="2220" height="215" as="geometry"/>
+                </mxCell>
+                <mxCell id="rev-plan" value="&lt;b&gt;Approve Plan&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A3A5C;&#39;&gt;Review Procedure Scope, Ownership &amp;amp;&lt;br/&gt;Execution Timeline (Maker-Checker);&lt;br/&gt;Assess completeness; Approve or Return&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-reviewer" vertex="1">
+                    <mxGeometry x="370" y="62" width="185" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="rev-design" value="&lt;b&gt;Approve Design&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A3A5C;&#39;&gt;Review Procedure Steps, GRC linkage,&lt;br/&gt;Business Controls &amp;amp; Vendor Details&lt;br/&gt;(Maker-Checker); Approve or Return&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-reviewer" vertex="1">
+                    <mxGeometry x="610" y="62" width="185" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="rev-exec" value="&lt;b&gt;Approve Execution &amp;amp; Results&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A3A5C;&#39;&gt;Review Manager sign-off captured in CRC;&lt;br/&gt;Sign-off represents approval of: Execution of&lt;br/&gt;Monitoring Assessment Activity and its results&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-reviewer" vertex="1">
+                    <mxGeometry x="935" y="62" width="215" height="98" as="geometry"/>
+                </mxCell>
+                <mxCell id="rev-cmir" value="&lt;b&gt;Review CMIR &amp;amp; Issue Draft Report&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#1A3A5C;&#39;&gt;Assess completeness, accuracy &amp;amp; evidence sufficiency;&lt;br/&gt;Issue Draft Report through CRC&lt;/font&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#CC0000;&#39;&gt;&lt;b&gt;⏱ SLA: Within 7 Calendar Days of Execution End Date&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#9DC3E6;strokeColor=#2E86C1;fontColor=#1A3A5C;" parent="lane-reviewer" vertex="1">
+                    <mxGeometry x="1595" y="62" width="235" height="118" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-validator" value="Validator&#xa;(ICRM Staff)" style="swimlane;startSize=140;fillColor=#F5EEF8;strokeColor=#7D3C98;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="925" width="2220" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="val-upload" value="&lt;b&gt;Upload Documentation Post Execution&lt;/b&gt;&lt;br/&gt;&lt;font style=&#39;font-size:10px;color:#5B2C6F;&#39;&gt;Upload supporting documentation (Read-Write role);&lt;br/&gt;Evidence and workpapers stored in CRC Monitoring Module&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#D7BDE2;strokeColor=#7D3C98;fontColor=#5B2C6F;" parent="lane-validator" vertex="1">
+                    <mxGeometry x="960" y="21" width="215" height="98" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-crc" value="CRC-ICRM&#xa;Systems" style="swimlane;startSize=140;fillColor=#EAF2FF;strokeColor=#5B9BD5;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="1065" width="2220" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="crc-plan" value="Store Plan Workpapers&lt;br/&gt;&lt;font style=&#39;font-size:9px;color:#2C5F8A;&#39;&gt;Coverage Reports &amp;amp; Dashboards;&lt;br/&gt;Audit Logs, PDF Export; Clone/Deactivate Procedures&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-crc" vertex="1">
+                    <mxGeometry x="445" y="30" width="185" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="crc-design" value="Store Design Workpapers&lt;br/&gt;&lt;font style=&#39;font-size:9px;color:#2C5F8A;&#39;&gt;Design Export; Audit Logs;&lt;br/&gt;Third-Party Identifier records&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-crc" vertex="1">
+                    <mxGeometry x="690" y="30" width="185" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="crc-exec" value="Store Execution Workpapers&lt;br/&gt;&lt;font style=&#39;font-size:9px;color:#2C5F8A;&#39;&gt;Execution Summary Reports; Snapshot Historical&lt;br/&gt;Plan/Design/Attestations; Audit Logs, PDF Export&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-crc" vertex="1">
+                    <mxGeometry x="960" y="30" width="215" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="crc-cmir" value="CMIR &amp;amp; iCAPS Integration&lt;br/&gt;&lt;font style=&#39;font-size:9px;color:#2C5F8A;&#39;&gt;Store CMIR &amp;amp; Issue Details; Create Issue Record&lt;br/&gt;in iCAPS (status = OPEN); Send Draft Report&lt;br/&gt;Notification; Refresh from iCAPS to CM; Track CMIR Workflow&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BDD7EE;strokeColor=#2E75B6;fontColor=#1F3864;" parent="lane-crc" vertex="1">
+                    <mxGeometry x="1350" y="30" width="245" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-business" value="Business&#xa;/ Issue Owner" style="swimlane;startSize=140;fillColor=#FDF2E9;strokeColor=#CA6F1E;fontSize=12;fontStyle=1;horizontal=0;swimlaneHead=0;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="1210" width="2220" height="175" as="geometry"/>
+                </mxCell>
+                <mxCell id="biz-receive" value="&lt;b&gt;Receive Draft Report Notification&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(125, 72, 9);&quot;&gt;Review CMIR findings; &lt;br&gt;review exception details&lt;br&gt;and issue write-up&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FAD7A0;strokeColor=#CA6F1E;fontColor=#7D4809;" parent="lane-business" vertex="1">
+                    <mxGeometry x="1595" y="52" width="190" height="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="biz-doc-approval" value="&lt;b&gt;Document Approval from Business&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(125, 72, 9);&quot;&gt;Business formally approves/confirms CMIR findings;&lt;br&gt;Issue Owner designated; confirms remediation commitment&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FAD7A0;strokeColor=#CA6F1E;fontColor=#7D4809;" parent="lane-business" vertex="1">
+                    <mxGeometry x="1845" y="52" width="245" height="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s2-revplan" value="Submit for Approval" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;fontSize=9;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cm-step2" target="rev-plan" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s3-revdesign" value="Submit for Approval" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;fontSize=9;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cm-step3" target="rev-design" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s4-revexec" value="Submit for Sign-Off" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;fontSize=9;dashed=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="cm-step4" target="rev-exec" edge="1">
+                    <mxGeometry x="0.0539" y="35" relative="1" as="geometry">
+                        <mxPoint x="-8" y="-21" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s4-valupload" value="Upload &lt;br&gt;Documentation" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#7D3C98;fontSize=9;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cm-step4" target="val-upload" edge="1">
+                    <mxGeometry x="-0.4191" y="-31" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="971" y="734"/>
+                            <mxPoint x="910" y="734"/>
+                            <mxPoint x="910" y="992"/>
+                        </Array>
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s2-crcp" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cm-step2" target="crc-plan" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="574" y="940"/>
+                            <mxPoint x="574" y="940"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s3-crcd" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cm-step3" target="crc-design" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="819" y="930"/>
+                            <mxPoint x="819" y="930"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s4-crce" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="cm-step4" target="crc-exec" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="890" y="453"/>
+                            <mxPoint x="890" y="1130"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s6-revcmir" value="Route for Review" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;fontSize=9;dashed=1;edgeStyle=orthogonalEdgeStyle;" parent="1" source="cm-step6" target="rev-cmir" edge="1">
+                    <mxGeometry x="0.103" y="32" relative="1" as="geometry">
+                        <mxPoint x="-5" y="-16" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s6-crccmir" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="cm-step6" target="crc-cmir" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1500" y="614"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-revcmir-bizdoc" value="Send Draft Report" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;fontSize=9;edgeStyle=orthogonalEdgeStyle;" parent="1" source="rev-cmir" target="biz-receive" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-biz-approval" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="biz-receive" target="biz-doc-approval" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-coord-outside" value="CMIR Outside&lt;br&gt;Monitoring path" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#F9A825;fontSize=9;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="coord-outside" target="cm-step6" edge="1">
+                    <mxGeometry x="0.0342" y="22" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1850" y="353"/>
+                            <mxPoint x="1770" y="353"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="wf-note" value="&lt;div&gt;&lt;b&gt;&lt;font style=&#39;font-size: 17px;&#39;&gt;Compliance Monitoring — Key Steps Summary&lt;/font&gt;&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;1a-1d. Setup &amp;amp; Planning:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Monitoring Coordinator/Champion sets up ICRM EC context, reviews CRA/Publications/Consumer Complaints, develops Coverage Plan, locks and baselines Plans.&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;2. Scoping:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Procedure Preparer defines Procedure Scope (AEs, GRC Risks, DSMT Segment, Geography). Approved by Procedure Reviewer (Maker-Checker).&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;3. Planning:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Define ownership &amp;amp; execution timeline; Coverage Reports. Approved by Procedure Reviewer.&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;4. Design:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Create Procedure Steps, link GRC Activity, add Business Controls. Approved by Procedure Reviewer.&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;5. Execution:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Execute as designed; document outcomes; Validator uploads documentation. Review Manager sign-off captured in CRC.&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;6. Exceptions (if any):&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Raise exceptions; tag GRC risks, publications &amp;amp; policies. Gateway: Issue Required?&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;7. CMIR:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Create CMIR in CRC; Document Approval from Business; create Issues/CAPs in iCAPS; publish CMIR. SLA: 7 calendar days from Execution End Date.&lt;/span&gt;&lt;/div&gt;&lt;div style=&#39;text-align: left;&#39;&gt;&lt;b style=&#39;font-size:13px;&#39;&gt;CMIR Outside Monitoring:&lt;/b&gt;&lt;span style=&#39;font-size:13px;&#39;&gt; Expedited Issue Report WITHOUT the full Plan/Design/Execution lifecycle.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
+                    <mxGeometry x="-10" y="1410" width="800" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="actor-note" value="&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Actors &amp;amp; Roles&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Monitoring Coordinator:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Creates/approves routines across ICRM ECs; can lock and baseline Plans.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Monitoring Champion:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Same as Coordinator except CANNOT baseline Plans.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Procedure Preparer:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Creates procedures (plans, designs, executions) for entitled ICRM ECs and MUs; &lt;br&gt;Assigned as First Delegate and Other Delegates.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Procedure Reviewer / Review Manager:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Approves routine plan, design and execution; sign-off captured in CRC.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Validator:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Uploads documentation post execution (Read-Write role).&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Monitoring Auditor:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; View-only access to completed executions and approved plans; &lt;br&gt;Takes precedence over all other CM roles when assigned.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Monitoring Admin:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Can access all reports and add/modify MUs (Read-Only).&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Monitoring QA:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Read-Only access to all Procedures and Reports for all ICRM ECs.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Procedure Viewer:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; View-only access to Plan and Design section.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size:13px;&quot;&gt;Business / Issue Owner:&lt;/b&gt;&lt;span style=&quot;font-size:13px;&quot;&gt; Receives CMIR; provides Document Approval; designated as Issue Owner for remediation.&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#EBF5FB;strokeColor=#2E86C1;align=left;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="1410" width="700" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="1580" y="1410" width="630" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-box" value="Should&amp;nbsp;" style="swimlane;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;startSize=28;swimlaneFillColor=#E6E6E6;container=0;" parent="3" vertex="1">
+                    <mxGeometry width="630" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-s1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#AED6F1;strokeColor=#2E86C1;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="16" y="41.33333333333326" width="76" height="29.85185185185185" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t1" value="Coordinator / Champion Tasks" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="43.62962962962956" width="235" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-s2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#A9DFBF;strokeColor=#239B56;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="16" y="80.37037037037044" width="76" height="29.85185185185185" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t2" value="Procedure Preparer Tasks" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="82.66666666666674" width="235" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-s3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9DC3E6;strokeColor=#2E86C1;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="16" y="119.40740740740739" width="76" height="29.85185185185185" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t3" value="Procedure Reviewer / Review Manager Tasks" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="121.7037037037037" width="280" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-s4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D7BDE2;strokeColor=#7D3C98;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="16" y="158.44444444444434" width="76" height="29.85185185185185" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t4" value="Validator Tasks" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="160.74074074074065" width="180" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-s5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BDD7EE;strokeColor=#2E75B6;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="16" y="197.48148148148152" width="76" height="29.85185185185185" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t5" value="CRC-ICRM System Actions" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="199.77777777777783" width="215" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-s6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD7A0;strokeColor=#CA6F1E;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="16" y="236.51851851851848" width="76" height="29.85185185185185" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t6" value="Business / Issue Owner Tasks" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="238.81481481481478" width="215" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-gw" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#D4AC0D;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="26" y="271.37037037037044" width="46" height="34.44444444444444" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-t7" value="Decision Gateway (XOR)" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="278.2592592592591" width="215" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-line1" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#333333;container=0;" parent="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="366" y="59.703703703703695" as="sourcePoint"/>
+                        <mxPoint x="446" y="59.703703703703695" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-lt1" value="Main Process Flow" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="456" y="50.51999999999998" width="144" height="22.96" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-line2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#5B9BD5;dashed=1;container=0;" parent="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="366" y="98.74074074074065" as="sourcePoint"/>
+                        <mxPoint x="446" y="98.74074074074065" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-lt2" value="System / CRC Integration Feed" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="456" y="89.55999999999995" width="164" height="22.96" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-line3" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CA6F1E;container=0;" parent="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="366" y="137.77777777777783" as="sourcePoint"/>
+                        <mxPoint x="446" y="137.77777777777783" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="leg-lt3" value="Cross-Functional Handoff" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="456" y="128.58999999999992" width="174" height="22.96" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-ev1" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#00AA44;strokeColor=#007733;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="366" y="183.7037037037037" width="28" height="25.25925925925926" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt4" value="Start Event" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="402" y="183.7037037037037" width="140" height="22.962962962962962" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-ev2" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#339966;strokeColor=#006633;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="366" y="222.74074074074065" width="28" height="25.25925925925926" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt5" value="Activity Closed (No Exception / No Issue)" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="402" y="222.74" width="218" height="22.96" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-ev3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="366" y="261.7777777777778" width="28" height="25.25925925925926" as="geometry"/>
+                </mxCell>
+                <mxCell id="leg-lt6" value="Exit to Issue Mgmt &amp;amp; Validation Module" style="text;html=1;align=left;fontSize=12;container=0;" parent="3" vertex="1">
+                    <mxGeometry x="402" y="261.78" width="218" height="22.96" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
