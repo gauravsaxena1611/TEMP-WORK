@@ -342,6 +342,8 @@ class DataStreamScreen extends JPanel {
     // STREAM MODE
     // -----------------------------------------------------------------------
 
+    private static final int KEY_QR_DWELL_MS = 4000; // hold key QR for 4 s so user can screenshot it
+
     private void activateStream(TransferSession s) {
         frameCount.set(0);
         loopCount.set(0);
@@ -350,7 +352,36 @@ class DataStreamScreen extends JPanel {
         currentImage = null;
         innerCards.show(innerDeck, VIEW_STREAM);
         startStatsTimer();
-        scheduleNextStreamFrame();
+        showKeyQrThenStream();
+    }
+
+    /**
+     * Displays the key QR code for KEY_QR_DWELL_MS so the user can take a screenshot,
+     * then automatically transitions into the data packet stream.
+     */
+    private void showKeyQrThenStream() {
+        qrExecutor.submit(() -> {
+            try {
+                String keyJson = session.getKeyMaterial().toJson();
+                BufferedImage img = generator.generateKeyQR(keyJson);
+                SwingUtilities.invokeLater(() -> {
+                    currentImage = img;
+                    qrPanel.repaint();
+                    frameLabel.setText("KEY QR — screenshot this now!");
+                    loopLabel.setText(" ");
+                    etaLabel.setText("Data stream starts in " + (KEY_QR_DWELL_MS / 1000) + " s");
+                    Timer dwell = new Timer(KEY_QR_DWELL_MS, e -> {
+                        ((Timer) e.getSource()).stop();
+                        if (running) scheduleNextStreamFrame();
+                    });
+                    dwell.setRepeats(false);
+                    dwell.start();
+                });
+            } catch (Exception ex) {
+                // Fall through to data stream if key QR generation fails
+                SwingUtilities.invokeLater(() -> { if (running) scheduleNextStreamFrame(); });
+            }
+        });
     }
 
     private void startStatsTimer() {
@@ -424,7 +455,7 @@ class DataStreamScreen extends JPanel {
         running = true;
         innerCards.show(innerDeck, VIEW_STREAM);
         startStatsTimer();
-        scheduleNextStreamFrame();
+        showKeyQrThenStream();
     }
 
     private void updateStreamStats() {
@@ -557,6 +588,20 @@ class DataStreamScreen extends JPanel {
         galleryStatusLabel.setText("Exporting 0 / " + total + "...");
 
         qrExecutor.submit(() -> {
+            // Export key QR first so it is always present even if frame export fails partway
+            try {
+                String keyJson = session.getKeyMaterial().toJson();
+                BufferedImage keyImg = generator.generateKeyQR(keyJson);
+                ImageIO.write(keyImg, "PNG", dir.resolve("key.png").toFile());
+            } catch (Exception ex) {
+                SwingUtilities.invokeLater(() ->
+                        app.showError("Could not export key.png: " + ex.getMessage()));
+                SwingUtilities.invokeLater(() -> {
+                    galleryExportBtn.setEnabled(true);
+                    gallerySaveBtn.setEnabled(true);
+                });
+                return;
+            }
             for (int i = 0; i < total; i++) {
                 final int idx = i;
                 try {

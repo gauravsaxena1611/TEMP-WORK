@@ -57,12 +57,17 @@ public class QRDecoder {
         // A fresh reader per call avoids stale internal state between attempts.
         QRCodeReader reader = new QRCodeReader();
 
-        // Primary attempt: normal orientation
+        // Primary attempt: PURE_BARCODE mode (fast; works when QR fills the frame)
         String text = tryDecode(reader, image);
         if (text != null) return text;
 
         // Secondary attempt: inverted colors (handles dark backgrounds)
-        return tryDecodeInverted(reader, image);
+        text = tryDecodeInverted(reader, image);
+        if (text != null) return text;
+
+        // Tertiary attempt: normal detection without PURE_BARCODE (for screenshots
+        // where the QR code is surrounded by UI elements and doesn't fill the image)
+        return tryDecodeRelaxed(reader, image);
     }
 
     // -----------------------------------------------------------------------
@@ -83,6 +88,22 @@ public class QRDecoder {
                     new BufferedImageLuminanceSource(image));
             BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
             return reader.decode(bitmap, HINTS).getText();
+        } catch (NotFoundException | ChecksumException | FormatException e) {
+            return null;
+        }
+    }
+
+    private static final Map<DecodeHintType, Object> HINTS_RELAXED = new HashMap<>();
+    static {
+        HINTS_RELAXED.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
+        // No PURE_BARCODE — lets ZXing locate the QR within a larger screenshot image
+    }
+
+    private static String tryDecodeRelaxed(QRCodeReader reader, BufferedImage image) {
+        try {
+            LuminanceSource source = new BufferedImageLuminanceSource(image);
+            BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+            return reader.decode(bitmap, HINTS_RELAXED).getText();
         } catch (NotFoundException | ChecksumException | FormatException e) {
             return null;
         }

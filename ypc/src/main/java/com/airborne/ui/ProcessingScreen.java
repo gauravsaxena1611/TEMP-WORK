@@ -13,6 +13,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -267,51 +269,72 @@ class ProcessingScreen extends JPanel {
     // Paste-images pipeline (single-file mode: PNG frames from sender export)
     // -----------------------------------------------------------------------
 
-    void beginPasteImages(String keyJson, List<Path> imagePaths, Path destination) {
+    void beginPasteImages(List<Path> imagePaths, Path destination) {
         pipelineStartTime = System.currentTimeMillis();
-        titleLabel.setText("Restoring file from images...");
+        titleLabel.setText("Restoring from screenshots...");
         progressBar.setValue(0);
-        statusLabel.setText("Parsing key...");
+        statusLabel.setText("Scanning images...");
         subLabel.setText(" ");
 
         SwingWorker<Manifest, Object[]> worker = new SwingWorker<>() {
             @Override
             protected Manifest doInBackground() throws Exception {
-                KeyMaterial km;
-                try {
-                    km = KeyMaterial.fromJson(keyJson);
-                    if (km.key == null || km.iv == null) throw new IllegalArgumentException("null fields");
-                } catch (Exception e) {
-                    throw new IllegalArgumentException(
-                            "The key string could not be parsed. Make sure you copied the complete " +
-                            "text from your phone after scanning the Key QR code.");
-                }
-
-                int blockSize = LTEncoder.DEFAULT_BLOCK_SIZE;
-                LTDecoder ltDecoder = new LTDecoder(km.totalBlocks, blockSize, (int) km.encryptedBytes);
                 QRDecoder qrDecoder = new QRDecoder();
+                KeyMaterial km = null;
+                List<FountainPacket> packets = new ArrayList<>();
                 int total = imagePaths.size();
 
-                publish(status("Decoding " + total + " QR image frames...", 5));
+                publish(status("Scanning " + total + " images for key and data QRs...", 3));
 
+                // Single pass: identify the key QR and collect all data packets
                 for (int i = 0; i < total; i++) {
-                    if (ltDecoder.isComplete()) break;
-                    Path imgPath = imagePaths.get(i);
                     try {
-                        BufferedImage image = ImageIO.read(imgPath.toFile());
-                        if (image == null) continue; // unreadable — skip
-                        byte[] raw = qrDecoder.decode(image);
-                        if (raw != null) {
-                            FountainPacket pkt = FountainPacket.deserialize(raw);
-                            if (pkt.projectId == (int) km.projectId) {
-                                ltDecoder.addPacket(pkt);
-                            }
-                        }
-                    } catch (Exception ignored) { /* skip bad frame */ }
+                        BufferedImage image = ImageIO.read(imagePaths.get(i).toFile());
+                        if (image == null) continue;
 
-                    int pct = 5 + (int) (i * 60.0 / total);
-                    publish(status(String.format("Decoded %d / %d frames (%d packets)",
-                            i + 1, total, ltDecoder.getRecoveredCount()), pct));
+                        String text = qrDecoder.decodeText(image);
+                        if (text == null) continue;
+
+                        // Try as key QR — JSON with key + iv fields
+                        if (km == null) {
+                            try {
+                                KeyMaterial candidate = KeyMaterial.fromJson(text);
+                                if (candidate != null && candidate.key != null && candidate.iv != null) {
+                                    km = candidate;
+                                    int pct = 3 + (int) (i * 57.0 / total);
+                                    publish(status("Key QR found — scanning remaining images...", pct));
+                                    continue;
+                                }
+                            } catch (Exception ignored) {}
+                        }
+
+                        // Try as data QR — Base64-encoded FountainPacket
+                        try {
+                            byte[] raw = Base64.getDecoder().decode(text);
+                            packets.add(FountainPacket.deserialize(raw));
+                        } catch (Exception ignored) {}
+
+                    } catch (Exception ignored) {}
+
+                    int pct = 3 + (int) (i * 57.0 / total);
+                    publish(status(String.format("Scanned %d / %d  (%d data packets found)",
+                            i + 1, total, packets.size()), pct));
+                }
+
+                if (km == null) {
+                    throw new IllegalArgumentException(
+                            "No key QR found in the selected images. " +
+                            "Make sure your screenshots include the KEY QR shown at the start of the stream " +
+                            "(displayed for 4 seconds with the label \"KEY QR — screenshot this now!\").");
+                }
+
+                publish(status("Key found — decoding " + packets.size() + " packets...", 62));
+                int blockSize = LTEncoder.DEFAULT_BLOCK_SIZE;
+                LTDecoder ltDecoder = new LTDecoder(km.totalBlocks, blockSize, (int) km.encryptedBytes);
+                for (FountainPacket pkt : packets) {
+                    if (pkt.projectId == (int) km.projectId) {
+                        ltDecoder.addPacket(pkt);
+                    }
                 }
 
                 if (!ltDecoder.isComplete()) {
@@ -319,21 +342,20 @@ class ProcessingScreen extends JPanel {
                     int needed = km.totalBlocks;
                     int pct    = needed > 0 ? got * 100 / needed : 0;
                     throw new IllegalStateException(
-                            "Not enough packets decoded from the image files. Got " + got +
-                            " of " + needed + " required (" + pct + "%). " +
-                            "Make sure all exported PNG frames are in the folder and were not corrupted.");
+                            "Not enough data packets. Got " + got + " of " + needed + " required (" + pct + "%). " +
+                            "Take more screenshots of the QR stream and add them to the folder.");
                 }
 
-                publish(status("Reconstructing data...", 68));
+                publish(status("Reconstructing data...", 70));
                 byte[] ciphertext = ltDecoder.getReconstructedData();
 
-                publish(status("Decrypting...", 78));
+                publish(status("Decrypting...", 80));
                 byte[] compressed = new Decryptor().decrypt(ciphertext, km);
 
                 publish(status("Decompressing...", 88));
                 byte[] blob = new Decompressor().decompress(compressed);
 
-                publish(status("Writing file...", 93));
+                publish(status("Writing files...", 93));
                 return new BlobDeserializer().deserialize(blob, destination);
             }
 

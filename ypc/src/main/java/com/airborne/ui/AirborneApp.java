@@ -126,8 +126,8 @@ public class AirborneApp extends JFrame {
         show(PROCESSING);
     }
 
-    void startPasteImages(String keyJson, List<Path> imagePaths, Path dest) {
-        processingScreen.beginPasteImages(keyJson, imagePaths, dest);
+    void startPasteImages(List<Path> imagePaths, Path dest) {
+        processingScreen.beginPasteImages(imagePaths, dest);
         show(PROCESSING);
     }
 

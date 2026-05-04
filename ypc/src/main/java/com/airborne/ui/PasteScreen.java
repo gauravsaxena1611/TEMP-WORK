@@ -23,6 +23,7 @@ class PasteScreen extends JPanel {
     private final AirborneApp app;
 
     private final JTextArea keyField;
+    private JPanel keySection; // visible in video mode only
 
     // -- Video mode --
     private final JLabel videoPathLabel;
@@ -62,7 +63,7 @@ class PasteScreen extends JPanel {
 
         // ---- Mode selector ----
         videoRadio  = new JRadioButton("Video recording (OBS / screen capture)");
-        imagesRadio = new JRadioButton("QR image files (PNG folder from sender)");
+        imagesRadio = new JRadioButton("QR image files (exported from sender)");
         videoRadio.setFont(AirborneApp.BODY_FONT);
         imagesRadio.setFont(AirborneApp.BODY_FONT);
         videoRadio.setBackground(AirborneApp.BG);
@@ -84,7 +85,7 @@ class PasteScreen extends JPanel {
         modePanel.add(videoRadio);
         modePanel.add(imagesRadio);
 
-        // ---- Key string ----
+        // ---- Key string (video mode only — images mode reads key.png automatically) ----
         JLabel keyLabel = fieldLabel("Key string (paste text from phone after scanning Key QR):");
         keyField = new JTextArea(3, 40);
         keyField.setFont(new Font("Monospaced", Font.PLAIN, 10));
@@ -96,6 +97,11 @@ class PasteScreen extends JPanel {
         JScrollPane keyScroll = new JScrollPane(keyField);
         keyScroll.setMaximumSize(new Dimension(Integer.MAX_VALUE, 80));
         keyScroll.setAlignmentX(LEFT_ALIGNMENT);
+
+        keySection = new JPanel();
+        keySection.setBackground(AirborneApp.BG);
+        keySection.setLayout(new BoxLayout(keySection, BoxLayout.Y_AXIS));
+        keySection.setAlignmentX(LEFT_ALIGNMENT);
 
         // ---- Video source row ----
         JLabel videoLabel  = fieldLabel("OBS recording (MKV or MP4):");
@@ -112,7 +118,7 @@ class PasteScreen extends JPanel {
         videoSection.add(videoRow);
 
         // ---- Images source row ----
-        JLabel imagesLabel  = fieldLabel("QR frames folder (exported by sender's \"Export All Frames\"):");
+        JLabel imagesLabel  = fieldLabel("QR frames folder (use \"Export All Frames\" on sender):");
         imagesDirLabel      = pathLabel("No folder selected");
         JButton imagesBrowse = AirborneApp.secondaryButton("Browse...");
         imagesBrowse.addActionListener(e -> browseImagesDir());
@@ -161,11 +167,13 @@ class PasteScreen extends JPanel {
         body.setBackground(AirborneApp.BG);
         body.setLayout(new BoxLayout(body, BoxLayout.Y_AXIS));
 
+        keySection.add(keyLabel);
+        keySection.add(Box.createVerticalStrut(4));
+        keySection.add(keyScroll);
+
         body.add(modePanel);
         body.add(Box.createVerticalStrut(16));
-        body.add(keyLabel);
-        body.add(Box.createVerticalStrut(4));
-        body.add(keyScroll);
+        body.add(keySection);
         body.add(Box.createVerticalStrut(16));
         body.add(sourcePanel);
         body.add(Box.createVerticalStrut(16));
@@ -180,7 +188,11 @@ class PasteScreen extends JPanel {
     }
 
     private void updateMode() {
-        // nothing extra needed — CardLayout in the body handles show/hide
+        boolean isVideo = videoRadio.isSelected();
+        keySection.setVisible(isVideo);
+        // Revalidate so the layout shrinks/expands correctly
+        revalidate();
+        repaint();
     }
 
     private void browseVideo() {
@@ -197,7 +209,7 @@ class PasteScreen extends JPanel {
     private void browseImagesDir() {
         JFileChooser fc = new JFileChooser();
         fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-        fc.setDialogTitle("Select folder containing exported QR PNG frames");
+        fc.setDialogTitle("Select folder containing exported QR frames");
         if (fc.showOpenDialog(app) == JFileChooser.APPROVE_OPTION) {
             imagesDirPath = fc.getSelectedFile().toPath();
             imagesDirLabel.setText(imagesDirPath.toString());
@@ -216,18 +228,20 @@ class PasteScreen extends JPanel {
         }
     }
 
+    private static final String[] IMAGE_EXTS = {"png", "jpg", "jpeg", "bmp", "gif", "webp", "tiff", "tif"};
+
     private void doStart() {
-        String keyJson = keyField.getText().trim();
-        if (keyJson.isEmpty()) {
-            app.showError("Please paste the key string.");
-            return;
-        }
         if (destPath == null) {
             app.showError("Please select a destination folder.");
             return;
         }
 
         if (videoRadio.isSelected()) {
+            String keyJson = keyField.getText().trim();
+            if (keyJson.isEmpty()) {
+                app.showError("Please paste the key string.");
+                return;
+            }
             if (videoPath == null) {
                 app.showError("Please select the OBS recording video file.");
                 return;
@@ -236,20 +250,26 @@ class PasteScreen extends JPanel {
 
         } else {
             if (imagesDirPath == null) {
-                app.showError("Please select the folder containing the exported QR PNG frames.");
+                app.showError("Please select the folder containing the exported QR frames.");
                 return;
             }
-            // Collect PNG files from the images directory, sorted by name
-            File[] pngFiles = imagesDirPath.toFile().listFiles(
-                    f -> f.isFile() && f.getName().toLowerCase().endsWith(".png"));
-            if (pngFiles == null || pngFiles.length == 0) {
-                app.showError("No PNG files found in the selected folder.");
+            // Collect all image files sorted by name — includes any key QR screenshot
+            File[] imageFiles = imagesDirPath.toFile().listFiles(f -> {
+                if (!f.isFile()) return false;
+                String name = f.getName().toLowerCase();
+                for (String ext : IMAGE_EXTS) {
+                    if (name.endsWith("." + ext)) return true;
+                }
+                return false;
+            });
+            if (imageFiles == null || imageFiles.length == 0) {
+                app.showError("No image files found in the selected folder.");
                 return;
             }
-            java.util.Arrays.sort(pngFiles, java.util.Comparator.comparing(File::getName));
+            java.util.Arrays.sort(imageFiles, java.util.Comparator.comparing(File::getName));
             List<Path> imagePaths = new ArrayList<>();
-            for (File f : pngFiles) imagePaths.add(f.toPath());
-            app.startPasteImages(keyJson, imagePaths, destPath);
+            for (File f : imageFiles) imagePaths.add(f.toPath());
+            app.startPasteImages(imagePaths, destPath);
         }
     }
 
