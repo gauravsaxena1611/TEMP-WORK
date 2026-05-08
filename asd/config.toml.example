@@ -1,0 +1,56 @@
+# config.toml — Copy this to %LOCALAPPDATA%\MeetingAssistant\config.toml
+# All paths are relative to the directory containing meeting_assistant.exe
+
+[audio]
+device = "auto"                    # "auto" = use VMware Virtual Audio; or exact device name
+sample_rate = 16000                # Hz — Whisper.cpp optimal
+channels = 1                       # Mono
+capture_mode = "loopback"          # "loopback" | "microphone" | "both"
+fallback_mode = "microphone"       # Fallback if loopback unavailable
+buffer_duration_ms = 100           # Audio buffer chunk size
+
+[transcription]
+live_model = "base.en"             # Whisper model for live VAD chunking
+batch_model = "small.en"           # Whisper model for post-call re-transcription
+enable_vad = true                  # Use built-in Silero VAD (Whisper.cpp 1.8.3+)
+vad_threshold = 0.5                # VAD sensitivity (0.0-1.0)
+language = "en"
+model_dir = "./models"
+max_segment_duration_ms = 30000    # Split segments longer than 30 seconds
+
+[llm]
+enabled = true
+provider = "llamacpp"              # "llamacpp" | "none"
+endpoint = "http://localhost:8080" # llama.cpp server
+model_name = "phi-4-mini"          # For logging purposes only
+temperature = 0.3
+max_tokens = 2048
+timeout_secs = 120                 # LLM calls can be slow on CPU
+health_check_on_start = true       # Warn if LLM server not reachable
+
+[embedding]
+model_path = "./models/minilm.onnx"
+dimensions = 384                   # all-MiniLM-L6-v2
+batch_size = 32                    # Segments to embed at once
+
+[storage]
+data_dir = "./data"                # All data: DB, audio, vectors
+audio_retention_days = 30          # Delete raw audio after N days (0 = keep forever)
+max_audio_file_mb = 500            # Stop recording if file exceeds this size
+encrypt_database = false           # Phase 3: enable SQLCipher
+
+[ui]
+hotkey_start_stop = "Alt+S"        # Toggle recording
+hotkey_pause = "Alt+P"             # Pause/resume
+show_tray_icon = true
+notification_on_complete = true
+notification_on_start = true
+
+[logging]
+level = "info"                     # "debug" | "info" | "warn" | "error"
+log_dir = "./logs"
+max_log_files = 7                  # Keep 7 days of logs
+
+[compliance]
+consent_required = true            # Show consent dialog before first recording
+log_consent = true                 # Write consent timestamps to DB
