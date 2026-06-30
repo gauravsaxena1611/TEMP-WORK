@@ -1,0 +1,141 @@
+<mxGraphModel adaptiveColors="auto" dx="4000" dy="2500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1320" background="#ffffff" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="title" value="CTR &#8211; US Cash Transaction Reporting (CSI 176042) &#8211; High Level Data Flow Diagram &#8211; v1.0" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="24" width="1400" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="subtitle" value="Phase 3/5: Data view  |  audience: Technical (Permit-to-Design)  |  last-verified: 2026-06-30  |  owner: ICRM / CRC Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+      <mxGeometry x="40" y="56" width="1400" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="inputs-lane" value="INPUTS" style="swimlane;whiteSpace=wrap;html=1;container=0;fontSize=16;fontStyle=1;fillColor=#E3F2FD;strokeColor=#1976D2;verticalAlign=top;align=center;startSize=36;" vertex="1" parent="1">
+      <mxGeometry x="40" y="100" width="360" height="800" as="geometry"/>
+    </mxCell>
+    <mxCell id="proc-lane" value="PROCESSING &#8211; CTR Application (CSI 176042)" style="swimlane;whiteSpace=wrap;html=1;container=0;fontSize=16;fontStyle=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;verticalAlign=top;align=center;startSize=36;" vertex="1" parent="1">
+      <mxGeometry x="420" y="100" width="940" height="800" as="geometry"/>
+    </mxCell>
+    <mxCell id="outputs-lane" value="OUTPUTS" style="swimlane;whiteSpace=wrap;html=1;container=0;fontSize=16;fontStyle=1;fillColor=#D5E8D4;strokeColor=#82B366;verticalAlign=top;align=center;startSize=36;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="100" width="380" height="800" as="geometry"/>
+    </mxCell>
+    <mxCell id="src-group" value="Source System (Citi Internal &#8211; System of Record)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#B7950B;verticalAlign=top;fontSize=12;fontStyle=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+      <mxGeometry x="60" y="180" width="320" height="380" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys-source" value="US Retail Cash Transaction Reporting&#10;[CSI 165802]&#10;&#10;&#8226; Source of CTR data (US)&#10;&#8226; Existing legacy system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#36393D;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=8;" vertex="1" parent="1">
+      <mxGeometry x="80" y="230" width="280" height="140" as="geometry"/>
+    </mxCell>
+    <mxCell id="feed-files" value="Feed Files (monthly)&#10;&#10;&#8226; XML CTR filings (to FinCEN)&#10;&#8226; CTR transaction detail&#10;&#8226; CTR branch-mapping&#10;&#8226; Static / reference branch data&#10;&#8226; ~8,000 CTRs / month" style="shape=mxgraph.flowchart.document;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=8;" vertex="1" parent="1">
+      <mxGeometry x="80" y="390" width="280" height="150" as="geometry"/>
+    </mxCell>
+    <mxCell id="core" value="CTR Core &#8211; OpenShift (Citi PaaS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E4E4E4;strokeColor=#6C8EBF;verticalAlign=top;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="440" y="160" width="900" height="600" as="geometry"/>
+    </mxCell>
+    <mxCell id="ndm-landing" value="NDM File Landing&#10;&#10;&#8226; Receives feed files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+      <mxGeometry x="460" y="240" width="160" height="80" as="geometry"/>
+    </mxCell>
+    <mxCell id="python-etl" value="Data / ETL (Python)&#10;&#10;&#8226; Reads &amp; parses files (Batch)&#10;&#8226; File validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+      <mxGeometry x="670" y="230" width="190" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="staging-db" value="CRC DB &#8211; Staging&#10;&#10;&#8226; Snapshot data load" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#FFE0B2;strokeColor=#FB8C00;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=12;" vertex="1" parent="1">
+      <mxGeometry x="910" y="225" width="160" height="120" as="geometry"/>
+    </mxCell>
+    <mxCell id="enrich" value="Business Rules / Enrichment&#10;&#10;&#8226; Business logic&#10;&#8226; Metrics: aggregation by&#10;&#160;&#160;&#160;region, segment (totals)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+      <mxGeometry x="670" y="430" width="200" height="130" as="geometry"/>
+    </mxCell>
+    <mxCell id="report-db" value="CRC DB &#8211; Report Table&#10;&#10;&#8226; Historical data (10-yr)&#10;&#8226; Reporting dataset" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#FFE0B2;strokeColor=#FB8C00;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=12;" vertex="1" parent="1">
+      <mxGeometry x="1120" y="240" width="170" height="140" as="geometry"/>
+    </mxCell>
+    <mxCell id="backend" value="Backend API (Java)&#10;&#10;&#8226; Reads report table (JDBC)&#10;&#8226; Formats report / metric data&#10;&#8226; API for dashboard only" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+      <mxGeometry x="1100" y="450" width="200" height="120" as="geometry"/>
+    </mxCell>
+    <mxCell id="dbjobs" value="DB Jobs&#10;&#8226; Snapshot&#10;&#8226; Backup&#10;&#8226; Governance&#10;&#8226; Execution" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontSize=11;verticalAlign=top;align=left;spacingLeft=8;spacingTop=6;" vertex="1" parent="1">
+      <mxGeometry x="460" y="430" width="160" height="150" as="geometry"/>
+    </mxCell>
+    <mxCell id="crc-ui" value="CRC UI &#8211; Reports &amp; Dashboards&#10;[CSI 176042]&#10;&#10;&#8226; React UI, new card in CRC portal&#10;&#8226; Served via Apache (HTTPS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontSize=12;verticalAlign=top;align=left;spacingLeft=8;spacingTop=8;" vertex="1" parent="1">
+      <mxGeometry x="1410" y="230" width="320" height="150" as="geometry"/>
+    </mxCell>
+    <mxCell id="out-users" value="Citi Users" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F9A825;verticalAlign=top;fontSize=13;fontStyle=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+      <mxGeometry x="1410" y="430" width="320" height="150" as="geometry"/>
+    </mxCell>
+    <mxCell id="user-icrm" value="ICRM Users&#10;(view reports)" style="shape=actor;whiteSpace=wrap;html=1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;align=center;fontSize=12;fillColor=#FFE082;strokeColor=#F9A825;" vertex="1" parent="1">
+      <mxGeometry x="1547" y="465" width="46" height="55" as="geometry"/>
+    </mxCell>
+    <mxCell id="e1" value="1. NDM file transfer (monthly)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;dashed=1;strokeColor=#FF6600;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="feed-files" target="ndm-landing" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" value="2. Read &amp; load (Batch)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;startArrow=diamondThin;startFill=1;strokeColor=#1976D2;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="ndm-landing" target="python-etl" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" value="3. Load staging data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;strokeColor=#1976D2;strokeWidth=2;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="python-etl" target="staging-db" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e4" value="4. ODBC (read staging)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;startArrow=oval;startFill=1;strokeColor=#4CAF50;strokeWidth=2;exitX=0.25;exitY=1;entryX=0.75;entryY=0;" edge="1" source="staging-db" target="enrich" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e5" value="5. Enrich &#8594; write report table" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;strokeColor=#1976D2;strokeWidth=2;exitX=1;exitY=0.3;entryX=0;entryY=1;" edge="1" source="enrich" target="report-db" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e6" value="6. JDBC query (report data)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;startArrow=oval;startFill=1;endArrow=block;strokeColor=#4CAF50;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="report-db" target="backend" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e7" value="7. Report / metric data (REST API)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;startArrow=oval;startFill=1;endArrow=block;strokeColor=#9673A6;strokeWidth=2;exitX=1;exitY=0.3;entryX=0;entryY=0.5;" edge="1" source="backend" target="crc-ui" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e8" value="8. View dashboards &amp; reports (HTTPS)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;startArrow=block;endArrow=block;strokeColor=#4CAF50;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="crc-ui" target="out-users" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eg1" value="Snapshot / Backup" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;dashed=1;strokeColor=#888888;strokeWidth=1;exitX=1;exitY=0.3;entryX=0;entryY=0.8;" edge="1" source="dbjobs" target="staging-db" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eg2" value="Govern / Execution" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;dashed=1;strokeColor=#888888;strokeWidth=1;exitX=1;exitY=0.7;entryX=0;entryY=0.95;" edge="1" source="dbjobs" target="report-db" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="legend" value="Key / Legend" style="swimlane;whiteSpace=wrap;html=1;container=0;fontSize=14;fontStyle=1;fillColor=#FFFDE7;strokeColor=#FBC02D;startSize=30;verticalAlign=top;align=left;" vertex="1" parent="1">
+      <mxGeometry x="40" y="940" width="780" height="320" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-arrows" value="Flow / integration types" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="60" y="978" width="300" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-a1" style="endArrow=block;html=1;strokeWidth=2;dashed=1;strokeColor=#FF6600;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="1015" as="sourcePoint"/><mxPoint x="120" y="1015" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="lg-a1l" value="File transfer (NDM)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="130" y="1005" width="260" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-a2" style="endArrow=block;startArrow=diamondThin;startFill=1;html=1;strokeWidth=2;strokeColor=#1976D2;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="1045" as="sourcePoint"/><mxPoint x="120" y="1045" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="lg-a2l" value="Batch (diamond) / internal DB write" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="130" y="1035" width="300" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-a3" style="endArrow=block;startArrow=oval;startFill=1;html=1;strokeWidth=2;strokeColor=#4CAF50;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="1075" as="sourcePoint"/><mxPoint x="120" y="1075" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="lg-a3l" value="API / DB connection (oval) &#8211; ODBC / JDBC" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="130" y="1065" width="320" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-a4" style="endArrow=block;startArrow=oval;startFill=1;html=1;strokeWidth=2;strokeColor=#9673A6;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="1105" as="sourcePoint"/><mxPoint x="120" y="1105" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="lg-a4l" value="REST API (app &#8594; UI)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="130" y="1095" width="320" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-a5" style="endArrow=block;startArrow=block;html=1;strokeWidth=2;strokeColor=#4CAF50;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="1135" as="sourcePoint"/><mxPoint x="120" y="1135" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="lg-a5l" value="User access (HTTPS)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="130" y="1125" width="320" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-a6" style="endArrow=block;dashed=1;html=1;strokeWidth=1;strokeColor=#888888;" edge="1" parent="1">
+      <mxGeometry relative="1" as="geometry"><mxPoint x="60" y="1165" as="sourcePoint"/><mxPoint x="120" y="1165" as="targetPoint"/></mxGeometry>
+    </mxCell>
+    <mxCell id="lg-a6l" value="DB jobs (snapshot / backup / governance)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="130" y="1155" width="340" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="lg-shapes" value="Cylinder = data store (CRC DB)      Document = feed files      Dashed box = domain / user group      Numbered labels (1-8) = data flow sequence" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#555555;" vertex="1" parent="1">
+      <mxGeometry x="60" y="1195" width="720" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="notes" value="Notes &amp; Metadata&#10;&#10;&#8226; Frequency: monthly feed; volume ~8,000 CTRs/month; retention 10 years (US compliance).&#10;&#8226; Integration: NDM file drop (no manual intervention) &#8211; source is a legacy System of Record; automated, traceable lineage. Lineage documented in Data Catalog.&#10;&#8226; DB connections: ODBC (load/staging) and JDBC (backend reads report table). APIs exposed for dashboard only; no downstream apps.&#10;&#8226; CRC DB hosted on ICRM DB ORAAS; app on OpenShift (Citi PaaS); UI served by Apache.&#10;&#8226; OPEN ISSUE: governance directive may require a new CSI for the new app/schema (currently reusing 176042) &#8211; pending confirmation.&#10;&#8226; Acronyms: NDM=Network Data Mover; CTR=Cash Transaction Report; CRC=Citi Risk &amp; Controls; ICRM=Independent Compliance Risk Mgmt; ORAAS=Oracle RAC as a Service; SoR=System of Record." style="whiteSpace=wrap;html=1;shape=mxgraph.basic.document;fillColor=#FFF2CC;strokeColor=#D6B656;dashed=1;dashPattern=12 12;align=left;verticalAlign=top;fontSize=11;spacingLeft=10;spacingTop=8;" vertex="1" parent="1">
+      <mxGeometry x="850" y="940" width="900" height="320" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>

@@ -1,0 +1,39 @@
+<mxGraphModel adaptiveColors="auto" dx="4000" dy="2500" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="title" value="CTR (Project Scissors) &#8212; C4 Level 1: System Context &#8212; Phase 2: Constraints &#8212; v1.0" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="40" y="30" width="1100" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="scope" value="What this shows: Citi Risk &amp; Controls &#8211; CTR Application and its external relationships. It does not show internal containers or components. Source system is internal to Citi but on a separate CSI." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+      <mxGeometry x="40" y="62" width="1100" height="30" as="geometry"/>
+    </mxCell>
+    <mxCell id="meta" value="diagram-type: C4-L1-Context  |  audience-variant: Technical  |  last-verified: 2026-06-30  |  owner: ICRM / CRC Architecture  |  source: 3. Dashboards &amp; Metrics / CTR" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="40" y="1030" width="1200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="citi-boundary" value="Citi internal network" style="rounded=1;dashed=1;fillColor=none;strokeColor=#888888;verticalAlign=top;fontSize=12;fontStyle=2;fontColor=#666666;dashPattern=6 6;" vertex="1" parent="1">
+      <mxGeometry x="80" y="140" width="1360" height="820" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys-source" value="US Retail Cash Transaction Reporting&#10;[CSI 165802]&#10;&#10;Upstream source system (existing).&#10;Generates daily CTR filings; redirects a&#10;copy of the monthly feed to the CRC CTR app." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#6c6c6c;fontColor=#ffffff;fontSize=12;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="160" y="380" width="280" height="160" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys-fincen" value="FinCEN&#10;[Regulatory system]&#10;&#10;US financial-crimes regulator that&#10;receives the source CTR filings." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b3b3b3;strokeColor=#6c6c6c;fontColor=#000000;fontSize=12;verticalAlign=middle;dashed=1;" vertex="1" parent="1">
+      <mxGeometry x="180" y="700" width="240" height="120" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys-crc" value="Citi Risk &amp; Controls &#8211; CTR Application&#10;[CSI 176042]&#10;&#10;Ingests, enriches and stores US CTR data;&#10;provides cash-transaction metrics, dashboards&#10;and reports to risk &amp; controls users." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4f8a;fontColor=#ffffff;fontSize=13;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="640" y="380" width="320" height="180" as="geometry"/>
+    </mxCell>
+    <mxCell id="person-users" value="ICRM Users&#10;&#10;Risk &amp; controls analysts who&#10;view CTR metrics, dashboards&#10;and reports." style="shape=mxgraph.basic.person;whiteSpace=wrap;html=1;fillColor=#08427b;strokeColor=#052c54;fontColor=#ffffff;fontSize=12;verticalAlign=top;spacingTop=4;" vertex="1" parent="1">
+      <mxGeometry x="1200" y="380" width="150" height="190" as="geometry"/>
+    </mxCell>
+    <mxCell id="e-source-crc" value="Sends monthly CTR feed files&#10;(XML filings, transaction &amp; branch-mapping,&#10;reference/branch static data) via NDM file transfer" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="sys-source" target="sys-crc" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e-source-fincen" value="Files daily CTR reports (regulatory)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="sys-source" target="sys-fincen" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e-users-crc" value="View metrics, dashboards &amp; reports" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=10;endArrow=block;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="person-users" target="sys-crc" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+  </root>
+</mxGraphModel>
