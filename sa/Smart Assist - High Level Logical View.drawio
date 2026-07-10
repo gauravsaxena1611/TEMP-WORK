@@ -1,0 +1,295 @@
+<mxfile host="65bd71144e">
+    <diagram id="v6sU-bTIPoG7M38rvXJN" name="Page-1">
+        <mxGraphModel dx="2150" dy="1008" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2200" pageHeight="1300" math="0" shadow="0" adaptiveColors="auto">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="in_dom" value="&lt;b&gt;Citi Apps&lt;/b&gt;" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;fontSize=12;fontStyle=1;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="165" y="940" width="320" height="252" as="geometry"/>
+                </mxCell>
+                <mxCell id="etl" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px; color: rgb(31, 41, 51);&quot;&gt;Data / ETL &lt;br&gt;(Batch · Python)&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;text-align:left&quot;&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85);&quot;&gt;• Parse feeds &amp;amp; docs&lt;br&gt;• Prepare embeddings&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FEF9E7;strokeColor=#B7950B;" parent="1" vertex="1">
+                    <mxGeometry x="661" y="1000" width="160" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="vector" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Vector Embedding / Search&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• RAG retrieval&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FEF9E7;strokeColor=#B7950B;" parent="1" vertex="1">
+                    <mxGeometry x="1664" y="806" width="230" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="tools" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Tools Layer&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• RAG · MCP · Local tools&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FEF9E7;strokeColor=#B7950B;" parent="1" vertex="1">
+                    <mxGeometry x="1664" y="715" width="230" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="sec_in" value="Inputs" style="swimlane;html=1;startSize=34;fontSize=15;fontStyle=1;container=0;whiteSpace=wrap;verticalAlign=top;align=center;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="230" width="380" height="1070" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_note" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px; color: rgb(31, 41, 51);&quot;&gt;Ingestion&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;text-align:left&quot;&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85);&quot;&gt;• Batch feeds (MCA/Reg)&lt;br&gt;• Transport: File / NDM + HTTPS&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#ffff88;strokeColor=#36393d;dashed=1;" parent="sec_in" vertex="1">
+                    <mxGeometry x="65.5" y="980" width="249" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="out_grp" value="&lt;b&gt;Internal Tools &lt;br&gt;(REST · MCP Envelope)&lt;/b&gt;" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;fontSize=12;fontStyle=1;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="sec_in" vertex="1">
+                    <mxGeometry x="74" y="292" width="250" height="362" as="geometry"/>
+                </mxCell>
+                <mxCell id="out_cia" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;CIA System / Services&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• CIA (REST) · CIA DB&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D6DBDF;strokeColor=#566573;" parent="sec_in" vertex="1">
+                    <mxGeometry x="99" y="351" width="200" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="out_reg" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;REG Mgmt System / Services&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Reg Mgmt (REST) · REG DB&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D6DBDF;strokeColor=#566573;" parent="sec_in" vertex="1">
+                    <mxGeometry x="102" y="419" width="195" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="out_mca" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;MCA System / Services&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• MCA (REST) · MCA DB&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D6DBDF;strokeColor=#566573;" parent="sec_in" vertex="1">
+                    <mxGeometry x="99" y="486" width="200" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="out_ext" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;CIA External Interfaces&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• iDOC (REST) · EEMS&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D6DBDF;strokeColor=#566573;" parent="sec_in" vertex="1">
+                    <mxGeometry x="99" y="563" width="200" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="uband" value="" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;fontSize=13;fontStyle=1;fillColor=#FFF8E1;strokeColor=#F9A825;spacingBottom=2;" parent="sec_in" vertex="1">
+                    <mxGeometry x="54" y="70" width="270" height="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="user1" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px; color: rgb(31, 41, 51);&quot;&gt;ICRM Business User&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;text-align:left&quot;&gt;&lt;ul style=&quot;line-height: 60%;&quot;&gt;&lt;li&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85); line-height: 60%;&quot;&gt;Query Natural Language questions&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FDEBD0;strokeColor=#AF601A;" parent="sec_in" vertex="1">
+                    <mxGeometry x="84" y="160" width="223" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#0066CC;shape=mxgraph.mscae.intune.user_group" parent="sec_in" vertex="1">
+                    <mxGeometry x="143" y="86" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="b2" value="2" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_in" vertex="1">
+                    <mxGeometry x="340" y="710" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="b1" value="1" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_in" vertex="1">
+                    <mxGeometry x="307" y="60" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="b10" value="10" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_in" vertex="1">
+                    <mxGeometry x="314" y="596" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="sec_pr" value="Processing&amp;nbsp; - Smart Assist (App ID 176046)" style="swimlane;html=1;startSize=34;fontSize=15;fontStyle=1;container=0;whiteSpace=wrap;verticalAlign=top;align=center;fillColor=#EAF2FB;strokeColor=#6C8EBF;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="228" width="1380" height="1072" as="geometry"/>
+                </mxCell>
+                <mxCell id="elk" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;Logger Storage (ELK)&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Observability &amp;amp; audit&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#E1D5E7;strokeColor=#9673A6;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="124" y="662" width="180" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="mcpg" value="&lt;b&gt;MCP Servers / Tools&lt;/b&gt;" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;fontSize=12;fontStyle=1;dashed=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="110" y="320" width="210" height="245" as="geometry"/>
+                </mxCell>
+                <mxCell id="r2d2" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px; color: rgb(31, 41, 51);&quot;&gt;R2D2 - LLM Proxy / Gateway&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;text-align:left&quot;&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85);&quot;&gt;• Fronts all external LLM calls&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#cdeb8b;strokeColor=#36393d;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="1100" y="252" width="210" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="orch" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px; color: rgb(31, 41, 51);&quot;&gt;Agentic Orchestration (ARC Agent)&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85);&quot;&gt;&lt;b&gt;ICRM Director-Agent&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• CIA Orchestrator + Workers&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Reg-Mgmt Orchestrator + Workers&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• MCA Orchestrator + Workers&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;• Planning &amp;amp; task decomposition&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D5F5E3;strokeColor=#239B56;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="752" y="330" width="270" height="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="front" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Front End / Chat Service&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Session &amp;amp; request handling&lt;br&gt;• Streams response to UI&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D4E6F1;strokeColor=#2E86C1;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="580" y="142.5" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="b5" value="5" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="1004" y="320" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="b9" value="9" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="104" y="315" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="b6" value="6" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="1115" y="569" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ds_pg" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px; color: rgb(31, 41, 51);&quot;&gt;Postgres / pgVector&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;text-align:left&quot;&gt;&lt;font style=&quot;font-size: 10px; color: rgb(85, 85, 85);&quot;&gt;• Staging&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;color: rgb(85, 85, 85); font-size: 10px; background-color: transparent;&quot;&gt;• &lt;/span&gt;&lt;span style=&quot;font-size: 10px; background-color: transparent;&quot;&gt;Process / Controlembeddings &lt;br&gt;&amp;nbsp; (RAG)&lt;/span&gt;&lt;/div&gt;" style="shape=cylinder3;html=1;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;fillColor=#D5DBDB;strokeColor=#424949;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="1144" y="720" width="190" height="135" as="geometry"/>
+                </mxCell>
+                <mxCell id="b7" value="7" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="1290" y="242" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="gov" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;Cross-cutting Governance Plane&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Entitlements  ·  Audit  ·  Provenance  ·  COIN-Auth (OAuth 2.0)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FCF3CF;strokeColor=#B7950B;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="727" y="551" width="320" height="62" as="geometry"/>
+                </mxCell>
+                <mxCell id="e13" value="13. governs" style="rounded=1;html=1;strokeColor=#B7950B;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="sec_pr" source="gov" target="orch" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="823" y="542" as="sourcePoint"/>
+                        <mxPoint x="824.0000000000005" y="495" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ds_mongo" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;MongoDB&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Chat / session metadata&lt;/font&gt;&lt;/div&gt;" style="shape=cylinder3;html=1;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;fillColor=#D5DBDB;strokeColor=#424949;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="806" y="932" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ds_s3" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;Sonic S3&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Document store&lt;/font&gt;&lt;/div&gt;" style="shape=cylinder3;html=1;whiteSpace=wrap;boundedLbl=1;backgroundOutline=1;fillColor=#D5DBDB;strokeColor=#424949;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="1004" y="932" width="140" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="b13" value="13" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="720" y="543" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="func" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Function &amp;amp; Tool Execution&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Invokes MCP / local tools&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FEF9E7;strokeColor=#B7950B;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="431" y="352" width="200" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="b8" value="8" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="614" y="336" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="valid" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Validation &amp;amp; Post-Processing&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Exception &amp;amp; compliance checks&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FEF9E7;strokeColor=#B7950B;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="431" y="438" width="200" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11a" value="" style="rounded=1;html=1;strokeColor=#1A5276;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="sec_pr" source="func" target="valid" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="synth" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Response Synthesis&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Plan → answer assembly&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FEF9E7;strokeColor=#B7950B;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="430" y="537" width="200" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="11. validate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1A5276;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="sec_pr" source="valid" target="synth" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="b11" value="11" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="420" y="482" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="b12" value="12" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="614" y="582" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="b14" value="14" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="290" y="652" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="m_cia" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;CIA MCP Server&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Serves CIA assessment data&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FDEBD0;strokeColor=#CA6F1E;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="144" y="357" width="150" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="m_reg" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;Reg Mgmt MCP Server&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Serves regulatory data&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FDEBD0;strokeColor=#CA6F1E;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="144" y="423" width="150" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="m_mca" value="&lt;b&gt;&lt;font style=&#39;font-size:12px;color:#1F2933&#39;&gt;MCA Proxy MCP Server&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Serves control / MCA data&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FDEBD0;strokeColor=#CA6F1E;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="144" y="491" width="150" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" value="8. MCP envelope" style="rounded=1;html=1;strokeColor=#1A5276;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;exitX=-0.002;exitY=0.536;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="sec_pr" source="func" target="m_cia" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="336" y="386" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e14" value="14. logs" style="rounded=1;html=1;strokeColor=#7B7D7D;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="sec_pr" source="mcpg" target="elk" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="483" y="648" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="b4" value="4" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="752" y="132" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" value="4. request" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1A5276;strokeWidth=2;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.357;entryY=0.012;entryDx=0;entryDy=0;entryPerimeter=0;" parent="sec_pr" source="front" target="orch" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e12a" value="12. response" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1A5276;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="sec_pr" source="synth" target="front" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_chat" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;CIA Chat UI&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Natural-language request&lt;br&gt;• Real-time channel (HTTPS)&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#D6EAF8;strokeColor=#2E86C1;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="140" y="145.5" width="210" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="1. NL request" style="rounded=1;html=1;strokeColor=#17A589;strokeWidth=2;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="sec_pr" source="in_chat" target="front" edge="1">
+                    <mxGeometry x="0.1549" y="13" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e7a" value="7. plan / LLM" style="rounded=1;html=1;strokeColor=#1A5276;strokeWidth=2;fontSize=10;jettySize=auto;endArrow=classic;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="sec_pr" source="orch" target="r2d2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="b3" value="3" style="ellipse;html=1;whiteSpace=wrap;aspect=fixed;fillColor=#FFF176;strokeColor=#333;fontStyle=1;fontSize=12;" parent="sec_pr" vertex="1">
+                    <mxGeometry x="268" y="762" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=1;html=1;strokeColor=#7B7D7D;strokeWidth=2.2;fontSize=10;jettySize=auto;endArrow=classic;dashed=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.004;exitY=0.306;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="sec_pr" source="orch" target="func">
+                    <mxGeometry x="0.3636" y="-45" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                        <mxPoint x="870" y="702" as="sourcePoint"/>
+                        <mxPoint x="710" y="702" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="sec_out" value="Outputs - Systems &amp;amp; Services (Consumes)" style="swimlane;html=1;startSize=34;fontSize=15;fontStyle=1;container=0;whiteSpace=wrap;verticalAlign=top;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="1940" y="230" width="340" height="1070" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;b&gt;Smart Assist User Types&lt;/b&gt;" style="rounded=1;html=1;whiteSpace=wrap;verticalAlign=top;fontSize=13;fontStyle=1;fillColor=#FFF8E1;strokeColor=#F9A825;spacingBottom=2;" parent="sec_out" vertex="1">
+                    <mxGeometry x="56.5" y="80" width="227" height="187" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;b&gt;&lt;font style=&quot;font-size: 12px; color: rgb(31, 41, 51);&quot;&gt;ICRM Business User&lt;/font&gt;&lt;/b&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-align: left; background-color: transparent;&quot;&gt;Reviews responses&lt;/span&gt;&lt;/div&gt;" style="rounded=1;html=1;arcSize=8;fillColor=#FDEBD0;strokeColor=#AF601A;align=center;textDirection=ltr;" parent="sec_out" vertex="1">
+                    <mxGeometry x="93" y="207" width="154" height="47" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#0066CC;shape=mxgraph.mscae.intune.user_group" parent="sec_out" vertex="1">
+                    <mxGeometry x="125" y="126" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="out_llm" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;External LLM — Gemini 2.5 Pro&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Strategic LLM API (via R2D2)&lt;br&gt;• Token-validated calls&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#FADBD8;strokeColor=#C0392B;dashed=1;" parent="sec_out" vertex="1">
+                    <mxGeometry x="50" y="531" width="230" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_src" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;MCA / Regulation Data&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• MCA · Reg Mgmt · CIA sources&lt;br&gt;• Regulatory &amp;amp; assessment records&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#EAECEE;strokeColor=#5D6D7E;" parent="1" vertex="1">
+                    <mxGeometry x="184" y="984" width="282" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="in_docs" value="&lt;b&gt;&lt;font style=&#39;font-size:13px;color:#1F2933&#39;&gt;Regulatory / Process &amp;amp; Control Docs&lt;/font&gt;&lt;/b&gt;&lt;div style=&#39;text-align:left&#39;&gt;&lt;font style=&#39;font-size:10px;color:#555&#39;&gt;• Feed files &amp;amp; documents (batch)&lt;br&gt;• For embedding &amp;amp; search&lt;/font&gt;&lt;/div&gt;" style="rounded=1;html=1;whiteSpace=wrap;arcSize=8;fillColor=#EAECEE;strokeColor=#5D6D7E;" parent="1" vertex="1">
+                    <mxGeometry x="184" y="1087" width="282" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend" value="&lt;b&gt;Key / Legend&lt;/b&gt;" style="swimlane;html=1;startSize=26;fontSize=13;fontStyle=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="2310" y="720" width="380" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_body" value="&lt;div style=&quot;text-align: left; line-height: 150%;&quot;&gt;&lt;font&gt;&lt;b style=&quot;font-size: 15px; line-height: 150%;&quot;&gt;Node colours&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#2E86C1&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; ICRM / CRC app &amp;amp; UI &amp;nbsp; &lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#239B56&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; ARC agent (orchestration)&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#B7950B&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Agent component / ETL &amp;nbsp; &lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#B7950B&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Governance plane&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#CA6F1E&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; MCP server &amp;nbsp; &lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#566573&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; External Citi system&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#424949&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Data store (cylinder) &amp;nbsp; &lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#9673A6&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Logger (ELK)&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#C0392B&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; External LLM (red dashed) &amp;nbsp; &lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#AF601A&quot;&gt;■&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; User type&lt;br&gt;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&quot;font-size: 15px; line-height: 150%;&quot;&gt;Arrow types&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 17px; line-height: 150%;&quot; color=&quot;#17A589&quot;&gt;&lt;b&gt;—&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; User interaction (HTTPS) &amp;nbsp; &lt;br&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#229954&quot;&gt;—&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Batch / file feed&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#1A5276&quot;&gt;—&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Internal agent / service call &amp;nbsp; &lt;br&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#2874A6&quot;&gt;—&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; REST / MCP envelope&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#7B7D7D&quot;&gt;—&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Database read / write &amp;nbsp; &lt;br&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#C0392B&quot;&gt;- -&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; LLM call&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#B7950B&quot;&gt;- -&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Governance &amp;nbsp; &lt;br&gt;&lt;/span&gt;&lt;font style=&quot;font-size: 15px; line-height: 150%;&quot; color=&quot;#7B7D7D&quot;&gt;- -&lt;/font&gt;&lt;span style=&quot;font-size: 15px; line-height: 150%;&quot;&gt; Logging&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;fillColor=none;strokeColor=none;fontSize=11;spacing=8;" parent="legend" vertex="1">
+                    <mxGeometry x="20" y="25" width="256" height="314" as="geometry"/>
+                </mxCell>
+                <mxCell id="eu" value="Access Chat" style="rounded=1;html=1;strokeColor=#17A589;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="uband" target="in_chat" edge="1">
+                    <mxGeometry x="0.1144" y="11" relative="1" as="geometry">
+                        <mxPoint x="71" y="425" as="targetPoint"/>
+                        <mxPoint x="402" y="412" as="sourcePoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e2" value="2. batch feed" style="rounded=1;html=1;strokeColor=#229954;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;" parent="1" source="in_src" target="etl" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2b" value="2. documents" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#229954;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="in_docs" target="etl" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="3. load &amp;amp; embed → persist" style="rounded=1;html=1;strokeColor=#7B7D7D;strokeWidth=2.4;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=93.75;entryPerimeter=0;" parent="1" source="etl" target="ds_pg" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1470" y="1043" as="sourcePoint"/>
+                        <mxPoint x="1194.9999999999995" y="1041.9999999999998" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e5" value="5. orchestrate tools" style="rounded=1;html=1;strokeColor=#1A5276;strokeWidth=2;fontSize=10;jettySize=auto;endArrow=classic;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="orch" target="tools" edge="1">
+                    <mxGeometry x="0.506" y="10" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                        <mxPoint x="1431.5000000000005" y="558" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e6a" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1A5276;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="tools" target="vector" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6b" value="6. vector search (RAG)" style="rounded=1;html=1;strokeColor=#7B7D7D;strokeWidth=2.2;fontSize=10;jettySize=auto;endArrow=classic;dashed=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="ds_pg" edge="1">
+                    <mxGeometry x="0.3636" y="-45" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                        <mxPoint x="1779" y="864" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e7b" value="7. LLM call (token)" style="rounded=1;html=1;strokeColor=#C0392B;strokeWidth=2;fontSize=10;jettySize=auto;endArrow=classic;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="r2d2" target="out_llm" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1745" y="600"/>
+                            <mxPoint x="2105" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9a" value="9. REST" style="rounded=1;html=1;strokeColor=#2874A6;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endFill=1;" parent="1" source="m_cia" target="out_cia" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="410" y="610" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9b" value="9. REST" style="rounded=1;html=1;strokeColor=#2874A6;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endFill=1;startArrow=none;startFill=0;" parent="1" source="m_reg" target="out_reg" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="700" as="sourcePoint"/>
+                        <mxPoint x="410" y="678" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e9c" value="9. REST" style="rounded=1;html=1;strokeColor=#2874A6;strokeWidth=1.8;fontSize=10;jettySize=auto;endArrow=classic;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;endFill=1;startArrow=none;startFill=0;" parent="1" source="m_mca" target="out_mca" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="420" y="750" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e10" value="10. iDOC / EEMS" style="rounded=1;html=1;strokeColor=#2874A6;strokeWidth=1.6;fontSize=10;jettySize=auto;endArrow=classic;exitX=0.25;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;endFill=1;" parent="1" source="m_mca" target="out_ext" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="410" y="819" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e12b" value="12. answer" style="rounded=1;html=1;strokeColor=#17A589;strokeWidth=2;fontSize=10;jettySize=auto;endArrow=classic;exitX=0.5;exitY=0;exitDx=0;exitDy=0;elbow=vertical;entryX=-0.007;entryY=0.167;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;" parent="1" source="front" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1900" y="340" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1215" y="341"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="&lt;b&gt;&lt;font style=&quot;color: rgb(0, 0, 255);&quot;&gt;SMART ASSIST - High Level Logical View&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=center;fontSize=20;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#0000FF;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="170" width="500" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;ol style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-size: 15px; text-align: left; white-space: nowrap;&quot;&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent; color: rgb(63, 63, 63);&quot;&gt;ICRM Business User sends a natural-language request via the Smart Assist Chat UI.&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;MCA / Regulation / CIA sources feed data and documents (batch) into Data/ETL.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(63, 63, 63);&quot;&gt;ETL loads a Postgres staging snapshot, generates embeddings and persists them to pgVector (RAG store).&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Front End forwards the request to the Agentic Orchestration (ICRM Director-Agent).&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Director-Agent plans the task and orchestrates the Tools Layer (RAG / MCP / Local).&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;RAG Tool runs Vector Embedding / Search against pgVector to retrieve process &amp;amp; control context.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Agent calls the LLM through R2D2 (LLM Proxy); R2D2 makes a token-validated call to Gemini 2.5 Pro.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Function &amp;amp; Tool Execution issues an MCP envelope to the MCP Servers (CIA / Reg Mgmt / MCA Proxy).&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;MCP Servers call the internal Citi systems over REST (CIA, REG Mgmt, MCA each with its DB).&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;MCA / CIA MCP path also reaches CIA External Interfaces (iDOC, EEMS) for documents &amp;amp; entitlements.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Retrieved data is validated (exception &amp;amp; compliance checks) and passed to Response Synthesis.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Synthesised answer returns to the Front End and is delivered to the UI.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;The Cross-cutting Governance Plane (Entitlements · Audit · Provenance · COIN-Auth) governs every agent action.&lt;/li&gt;&lt;li style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;All components emit logs / traces to Logger Storage (ELK) for observability &amp;amp; audit.&lt;/li&gt;&lt;/ol&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+                    <mxGeometry x="2310" y="230" width="800" height="470" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font style=&quot;color: rgb(102, 102, 102);&quot;&gt;Notes&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="2620" y="240" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
