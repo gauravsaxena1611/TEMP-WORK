@@ -1,0 +1,26 @@
+Subject: Intro + request to discuss: using Analytics Hub (AHUB) as a data-ingestion source for our CRC Fair Lending tool
+
+Hi [AHUB Team / Name],
+
+I'm reaching out from the Office of Fair Lending (OFL) technology team. We've built a Fair Lending analytics application on CRC (Citi Risk & Controls) — app ID 176042 — that replaces a set of legacy SAS/Python EUCs (our BISG and DIA processes). We're now planning the data-automation phase, and AHUB looks like a strong fit because our users already work there today. Before we go further, we'd like your guidance to confirm what's possible and what it takes to set up.
+
+Background (where we are today)
+Our users currently prepare their input data (extracting from EDW and other sources) and place it into their AHUB directories, then manually download and re-upload it into CRC. The legacy EUCs already read from AHUB via a secure Python SFTP (PySFTP) connection, server-to-server, so the data never lands on a local machine.
+
+What we'd like to do
+Use AHUB as the landing zone / starting point for our tool's input files. Users would drop their prepared file into AHUB, and CRC would read it directly via a secure Python SFTP connection into our environment — no local downloads, no copying PII into a database. Our preferred model is a per-user, entitlement-based connection (a user authenticates with their own AHUB credentials and sees only the files/folders they're entitled to — similar to how SAS Studio already surfaces a user's AHUB directories), rather than one shared repository.
+
+What we'd like from you
+
+Is our understanding correct, and is this pattern supported today — can another application read from AHUB this way?
+Feasibility of the entitlement-based model — can a user's own AHUB entitlements drive what our tool can access, out of the box?
+Prerequisites & setup — what do we need in place from the AHUB side for this to work (connection/service setup, M2M encryption, credentials/keys, dedicated paths, approvals)? CRC sits on a different network, so we'd like to understand any cross-network requirements.
+Onboarding process — what does AHUB onboarding look like for a new consuming application, and for granting new user teams access (the CMP/account process)?
+Reference — is any other application already integrating with AHUB in a similar way that we could learn from?
+Right contacts — who is the best person/team (and product owner) to guide us through this, in case we need to go deeper on any of the above?
+
+Could we get 30 minutes in the next week or so to walk through this? I can share a short architecture diagram and the specific use case ahead of the call. Please let me know your availability, or point me to the right person to set this up.
+
+Thanks,
+Gaurav
+[Title / Team] · Office of Fair Lending
