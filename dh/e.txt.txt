@@ -1,0 +1,32 @@
+Subject: Daksh India ICRM Dashboarding — Deviation from Approved Architecture; Guidance Requested
+
+Hi Cal, Terri,
+
+I wanted to flag a deviation from the approved architecture on the Daksh India ICRM dashboarding component and seek your guidance on the path forward.
+
+What was approved:
+
+When we reviewed and approved the Daksh architecture (P2B), the design for the India legal compliance reporting component specified that data from the existing source systems (REPE, CIS, CRA, FLRA, Regulators) would flow automatically into the CRPC database, and a Tableau dashboard would be used to generate reports directly from that data. Apart from one tactical manual upload that was acknowledged at the time, there was no other manual intervention in the approved flow.
+
+What has changed:
+
+During implementation, the team made two material changes without bringing them back through architecture review:
+
+Technology and platform shift. Instead of building the Tableau dashboard as originally approved, the team chose to build an Angular-based dashboard as an extension of the existing CRMT dashboard (a separate application with its own App ID, in production since approximately 2020). The stated reason is that the business required maker-checker workflows, which Tableau cannot support. While the technical rationale may be valid, this is a fundamentally different application and architecture from what was reviewed.
+Introduction of manual data uploads. The team has introduced a manual upload step for certain source data that could not be made available through automated feeds within their two-month delivery window. The team has indicated this is intended as a temporary measure, however even a temporary manual upload in production introduces risk — particularly given the regulatory environment. This component was not part of the approved design.
+
+The problem:
+
+The deployment team (Nikitha / Durga's team) approached us for deployment approval referencing the Daksh P2B and architecture artifacts. However, the work they are deploying is on the CRMT dashboard — an entirely different system. The Daksh architecture we approved does not cover the CRMT dashboard's components, processing layer, or output layer. In effect, we are being asked to approve a deployment against architecture artifacts that do not represent the system being deployed.
+
+Where we are now:
+
+I have asked the team to provide the existing CRMT architecture artifacts from Tyagu's BAU project (PTS 4613/4614), which should already have approved diagrams — C4 context, component diagrams, high-level logical flow, data models, and data flow. We would use those as the starting point and identify what additions or changes are needed to accommodate the Daksh dashboarding features. The Daksh application architecture itself remains unchanged and is not affected by this.
+
+What we need from you:
+
+Given the deviation — specifically the introduction of manual uploads and the shift away from the approved Tableau-based design — this may need to go back to the larger ARB for re-approval. Could you advise on the appropriate path? If Agim is able to provide a sign-off on the deviation, that may be sufficient. Otherwise, we will need to schedule an ARB review, which I understand would take approximately a week.
+
+Happy to walk through this in more detail if helpful.
+
+Best regards, Gaurav
