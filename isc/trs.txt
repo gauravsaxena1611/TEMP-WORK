@@ -1,0 +1,58 @@
+Here is the detailed transcript of the meeting, followed by a concise summary document capturing the key points and action items for your team.
+Detailed Meeting Transcript
+Participants:
+Kallol Biswas
+Gaurav
+[00:00 - 00:18]
+Kallol Biswas: Hey Gaurav.
+Gaurav: Hi Kallol.
+Kallol Biswas: Sorry, my Zoom was stuck, I think... don't know, I have to log out and log in again. Oh, sorry I was a little...
+Gaurav: Yeah, yeah. How are you doing?
+Kallol Biswas: I'm good, I'm good, Gaurav.
+[00:24 - 00:46]
+Kallol Biswas: I need a bit of your help. So, I kept you on an email with capabilities yesterday. I spoke with Mangesh, so Mangesh knows what to do. Can you connect with Sumit... Sumit Gupta? He's also on that email, right?
+Gaurav: Yeah, yeah.
+Kallol Biswas: He works for Chirag. Ask him if he has anything that is part of that CSI. Okay?
+Gaurav: Okay, okay.
+[00:48 - 01:05]
+Kallol Biswas: There is two CSI, right? One is that I sent it to... policy guys. Nikhil is taking care of it. There is the other one, which is that 406 CSI, is a giant CSI and it has many things.
+Gaurav: I see.
+[01:06 - 01:39]
+Kallol Biswas: Right? So what he needs to do... Durga is out. Sumit works for Chirag. First he needs to know if he has any process which is part of this giant CSI. If it is, then we need to know which capability or functionality it has. So if you saw, I sent another email, so they have to confirm that those three capabilities—are they good enough or they have to have additional capability. You know what I'm saying?
+[01:40 - 01:52]
+Gaurav: I'm getting... I'm getting what you're saying, but based on those capabilities, are we splitting these CSIs?
+Kallol Biswas: No, we're not doing any split. So as of now, the question is as of now... (Kallol starts sharing his screen)
+[01:53 - 02:26]
+Kallol Biswas: If you see this email...
+Gaurav: Yeah, yeah.
+Kallol Biswas: For this giant CSI, there is these two functions. So the question is, to both Chirag... I CC'd him but I think he's out of office. Contact Sumit Gupta who works for Chirag. Do you know Sumit?
+Gaurav: Yeah, yeah, he was in the previous call, yeah.
+[02:27 - 03:00]
+Kallol Biswas: Yes, yes. So connect with Eshwar and Sumit. Because Durga is reporting... Ask him if he has any capabilities or any process that is part of this CSI. If yes, do we have to add additional function to that CSI? And for that, today I sent that follow-up email which has all the functions.
+Gaurav: Okay, okay.
+Kallol Biswas: So the same question you'll ask Sumit. Because Chirag is out, okay?
+[03:01 - 03:19]
+Gaurav: Okay, okay. So both the teams basically, the Durga's team and Chirag's team...
+Kallol Biswas: Yes, yes. I already spoke with Mangesh. We are sorted. Shinu doesn't have anything, so then we are covered. Okay?
+Gaurav: Okay. Sure, sure. Okay.
+Kallol Biswas: Alright? Thank you. Thank you.
+Gaurav: Thank you, no problem. Okay, yeah.
+Meeting Summary & Action Items
+Overview:
+A quick alignment call to discuss the ongoing capabilities mapping for two main CSIs, specifically focusing on delegating tasks while key personnel (Chirag and Durga) are out of the office.
+Important Points:
+CSI Breakdown: There are two main CSIs currently in focus.
+The first is being handled by Nikhil (Policy team).
+The second is "406 CSI", a large, complex ("giant") CSI that houses multiple processes.
+No CSI Splitting: Clarification was made that the 406 CSI is not being split. The goal is simply to map existing team processes to the correct capabilities/functions within it.
+Team Statuses:
+Mangesh has already been briefed and is sorted.
+Shinu’s team has no overlapping processes for this, so they are fully covered.
+Durga and Chirag are currently out of the office, requiring communication to be routed through their reports.
+To-Dos / Action Items:
+
+Gaurav: Reach out to Sumit Gupta (representing Chirag's team) and Eshwar (representing Durga's team).
+
+Gaurav: Ask Sumit and Eshwar to review their team's processes to see if any fall under the "406 CSI".
+
+Gaurav: If they do have processes in the 406 CSI, have them review Kallol's follow-up email to confirm if the 3 currently listed capabilities/functions are sufficient, or if additional functions need to be added to the CSI.
